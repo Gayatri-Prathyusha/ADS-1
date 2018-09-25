@@ -1,108 +1,142 @@
-// public class Percolation {
-//    public Percolation(int n)                // create n-by-n grid, with all sites blocked
-//    public    void open(int row, int col)    // open site (row, col) if it is not open already
-//    public boolean isOpen(int row, int col)  // is site (row, col) open?
-//    public boolean isFull(int row, int col)  // is site (row, col) full?
-//    public     int numberOfOpenSites()       // number of open sites
-//    public boolean percolates()              // does the system percolate?
-// }
-
-
-// You can implement the above API to solve the problem
+/**
+ * percolation theory.
+ * @author Gayatri Prathyusha.
+ */
+import java.util.Scanner;
+/**
+ * Class for percolation.
+ */
 class Percolation {
-    private boolean[][] grid;
-    private WeightedQuickUnionUF weightqfind;
-    private int gridSize;
-
-    public Percolation(int N)              // create N-by-N grid, with all sites blocked
-    {
-        gridSize = N;
-        grid = new boolean[N][N];
-        weightqfind = new WeightedQuickUnionUF((N*N));
-        for(int i = 0; i < N; i++)
-        {
-            for(int j = 0; j < N; j++)
-            {  
-                grid[i][j] = false;
+    /**
+     * declaration of weightqUnion.
+     */
+    private WeightedQuickUnionUF weightqUnion;
+    /**
+     * private declaration of n.
+     */
+    private int n;
+    /**
+     * declaration of size.
+     */
+    private int size;
+    /**
+     * declaration of top.
+     */
+    private int top;
+    /**
+     * declaration of bottom.
+     */
+    private int bottom;
+    /**
+     * declaration of count.
+     */
+    private int count;
+    /**
+     * declaration of boolean array.
+     */
+    private boolean[] connected;
+    /**
+     * Constructs the object.
+     *
+     * @param      n1    The n 1
+     */
+    Percolation(final int n1) {
+        this.n = n1;
+        this.size = n1 * n1;
+        this.top = size;
+        this.bottom = size + 1;
+        this.count = 0;
+        weightqUnion = new WeightedQuickUnionUF(size + 2);
+        connected = new boolean[size];
+        for (int i = 0; i < n; i++) {
+            weightqUnion.union(top, i);
+            weightqUnion.union(bottom, size - i - 1);
+        }
+    }
+    /**
+     * converts to 1D array.
+     *
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private int convert(final int i, final int j) {
+//since we take size as 0 to n-1, we decrement one value from rows and columns.
+        return n * (i - 1) + (j - 1);
+    }
+    /**
+     * Connects open sites(== full site).
+     *
+     * @param      row   The row
+     * @param      col   The col
+     */
+    private void connectOpenSites(final int row, final int col) {
+        if (connected[col] && !weightqUnion.connected(row, col)) {
+            weightqUnion.union(row, col);
+        }
+    }
+    /**
+     * opens the blocked sites.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     */
+    public void open(final int row, final int col) {
+        // int count = 0;
+        int index = convert(row, col);
+        connected[index] = true;
+        count++;
+        int toprow = index - n;
+        int bottomrow = index + n;
+        if (n == 1) {
+            weightqUnion.union(top, index);
+            weightqUnion.union(bottom, index);
+        }
+        if (bottomrow < size) { //bottom
+            connectOpenSites(index, bottomrow);
+        }
+        if (toprow >= 0) { //top
+            connectOpenSites(index, toprow);
+        }
+        if (col == 1) { //left
+            if (col != n) {
+                connectOpenSites(index, index + 1);
             }
+            return;
         }
+        if (col == n) { //right
+            connectOpenSites(index, index - 1);
+            return;
+        }
+        connectOpenSites(index, index + 1);
+        connectOpenSites(index, index - 1);
     }
-    public void open(int i, int j)         // open site (row i, column j) if it is not already
-    {
-        int row = i-1;
-        int column = j - 1;
-        grid[row][column] = true;
-        if (row-1 >= 0 && isOpen(i-1 , j))  
-        {
-            weightqfind.union(to2D(i,j),to2D(i-1,j));
-        }
-        if (row+1 < gridSize && isOpen(i+1, j))         
-        {
-            weightqfind.union(to2D(i,j),to2D(i+1,j));
-        }
-        if (column-1 >= 0 && isOpen(i, j-1))     
-        {
-            weightqfind.union(to2D(i,j),to2D(i,j-1));
-        }
-        if (column+1 < gridSize && isOpen(i, j+1))     
-        {
-            weightqfind.union(to2D(i,j),to2D(i,j+1));
-        }
+    /**
+     * Determines if it is an open site.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return     True if open, False otherwise.
+     */
+    public boolean isOpen(final int row, final int col) {
+        return connected[convert(row, col)];
     }
-    public boolean isOpen(int i, int j)    // is site (row i, column j) open?
-    {
-        return grid[i-1][j-1];
+    /**
+     * counts number of open sites.
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int numberOfOpenSites() {
+        return count;
     }
-    public boolean isFull(int i, int j)    // is site (row i, column j) full?
-    {
-        if(isOpen(i,j))
-        {
-            for(int k = 0; k < gridSize; k++)
-            {
-
-               if(weightqfind.connected(to2D(i,j),k)) return true;
-            }
-        }
-        return false;
+    /**
+     * returns true if percolates.
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean percolates() {
+        return weightqUnion.connected(top, bottom);
     }
-    public boolean percolates()            // does the system percolate?
-    {
-        if (gridSize == 1)
-        {
-            if (isOpen(1,1))
-            {
-                return true;
-            }
-            return false;
-        }
-        if(gridSize == 2)
-        {
-            if (weightqfind.connected(0,3)) return true;
-            if (weightqfind.connected(1,2)) return true;
-            if (weightqfind.connected(0,2)) return true;
-            if (weightqfind.connected(1,3)) return true;
-            return false;
-        }
-
-
-        for (int i = (gridSize * (gridSize - 1))-1; i < (gridSize * gridSize); i++)
-        {
-           // System.out.println((gridSize * (gridSize - 1))-1);
-            //System.out.println(gridSize * gridSize-1);
-            for (int i2 = 0; i2 < gridSize; i2++)
-            {
-                //System.out.println(i);
-                //System.out.println(i2);
-                //System.out.print(weightqfind.connected(i, i2));
-                if (weightqfind.connected(i, i2)) return true;
-
-            }
-        }
-        return false;
-    }
-    private int to2D(int i, int j)
-    {
-        return (i-1)*gridSize+(j-1);
-    }
-
 }
