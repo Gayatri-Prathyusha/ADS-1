@@ -23,6 +23,6 @@ public final class Solution {
             String[] tokens = sc.nextLine().split(" ");
             p.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
         }
-        System.out.println(p.percolates() && p.numberOfOpenSites() != 0);
+        System.out.println(p.percolates() && p.findOpenSites() != 0);
     }
 }

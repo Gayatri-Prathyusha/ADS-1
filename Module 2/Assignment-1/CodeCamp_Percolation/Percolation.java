@@ -90,7 +90,6 @@ class Percolation {
         int toprow = index - n;
         int bottomrow = index + n;
         if (n == 1) {
-            System.out.println("djhfksb");
             weightqUnion.union(top, index);
             weightqUnion.union(bottom, index);
         }
@@ -129,7 +128,7 @@ class Percolation {
      *
      * @return     { description_of_the_return_value }
      */
-    public int numberOfOpenSites() {
+    public int findOpenSites() {
         return count;
     }
     /**
