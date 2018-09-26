@@ -26,32 +26,14 @@ class ThreeSum {
             high = mid - 1;
                 
         }
-        // if(low == element || high == element || mid == element) {
-        //  return true;
-        // } else  
-         }
+    }
          return -1;
 
     }
-
-
-    // public  void printAll(int[] a) {
-    //     int n = a.length;
-    //     Arrays.sort(a);
-    //     if (containsDuplicates(a)) throw new IllegalArgumentException("array contains duplicate integers");
-    //     for (int i = 0; i < n; i++) {
-    //         for (int j = i+1; j < n; j++) {
-    //             int k = BinarySearch(a, -(a[i] + a[j]));
-    //             if (k > j) {
-    //                 System.out.println((a[i] + " " + a[j] + " " + a[k]));
-    //             }
-    //         }            
-    //     }
-    // } 
     public int count(int[] a) {
         int n = a.length;
         Arrays.sort(a);
-        if (containsDuplicates(a)) throw new IllegalArgumentException("array contains duplicate integers");
+        if (containsDuplicates(a));
         int count = 0;
         for (int i = 0; i < n; i++) {
             for (int j = i+1; j < n; j++) {
