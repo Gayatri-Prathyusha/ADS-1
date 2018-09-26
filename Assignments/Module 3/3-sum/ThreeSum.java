@@ -31,7 +31,7 @@ class ThreeSum {
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 int value = BinarySearch(a, -(a[i] + a[j]));
-                if (value > j) {
+                if (value < j) {
                     count++;
                 }
             }
