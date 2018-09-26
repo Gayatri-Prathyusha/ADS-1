@@ -5,7 +5,6 @@ class ThreeSum {
     ThreeSum(int[] arr1, int n) {
         arr = arr1;
         size = n;
-
     }
     public int BinarySearch(int[] array, int element) {
         int low = 0; 
@@ -18,9 +17,8 @@ class ThreeSum {
         }
          else if (array[mid] < element){
             low = mid + 1;
-         } else {
-            high = mid - 1;
-                
+        } else {
+            high = mid - 1;       
         }
     }
          return -1;

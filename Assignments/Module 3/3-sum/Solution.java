@@ -1,9 +1,22 @@
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 public class Solution {
-    Solution() {
-
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        /**
+         * empty constructoor to reduce checkstyle error.
+         */
     }
-    public static void main(String[] args)  { 
+    /**
+     * .
+     *
+     * @param      args  The arguments
+     */
+    public static void main(String[] args)  {
         Scanner in = new Scanner(System.in);
         int n = Integer.parseInt(in.nextLine());
         int[] a = new int[n];
