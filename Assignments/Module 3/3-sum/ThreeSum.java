@@ -12,7 +12,7 @@ class ThreeSum {
         int high = array.length - 1;
 
         while (low <= high) {
-        int mid = low + (high - low)/ 2;
+        int mid = (high + low)/ 2;
         if (array[mid] == element){
             return mid;
         }
