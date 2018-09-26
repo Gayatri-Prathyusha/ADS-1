@@ -31,8 +31,8 @@ class ThreeSum {
         int count = 0;
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
-                int value = Arrays.binarySearch(a, -(a[i] + a[j]));
-                if (value > j) {
+                int value = BinarySearch(a, (a[i] + a[j]));
+                if (value > j && value > 0) {
                     count++;
                 }
             }
