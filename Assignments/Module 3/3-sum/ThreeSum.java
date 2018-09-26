@@ -30,7 +30,7 @@ class ThreeSum {
         Arrays.sort(a);
         int count = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = 1; j < n; j++) {
+            for (int j = i + 1; j < n; j++) {
                 int value = Arrays.binarySearch(a, -(a[i] + a[j]));
                 if (value > j) {
                     count++;
