@@ -12,10 +12,11 @@ class ThreeSum {
         int high = array.length - 1;
 
         while (low <= high) {
-        int mid = (high + low)/ 2;
-         if (array[mid] == element) {
-            return element;
-         } else if (array[mid] < element) {
+        int mid = low + (high - low)/ 2;
+        if (array[mid] == element){
+            return mid;
+        }
+         else if (array[mid] < element){
             low = mid + 1;
          } else {
             high = mid - 1;
@@ -31,8 +32,8 @@ class ThreeSum {
         int count = 0;
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
-                int value = BinarySearch(a, (a[i] + a[j]));
-                if (value > j && value > 0) {
+                int value = BinarySearch(a, -(a[i] + a[j]));
+                if (value > j) {
                     count++;
                 }
             }
