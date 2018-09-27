@@ -1,20 +1,40 @@
-
+import java.util.Scanner;
+/**
+ * Class for Solution.
+ */
 public final class Solution {
-    private Solution() {
 
-    }
+  /**
+   * Constructs the object.
+   */
+  private Solution() {
     /**
-     * { function_description }
-     *
-     * @param      args  The arguments
+     * Unused.
      */
-    public static void main(final String[] args) { 
-        BalancedParan bp = new BalancedParan();
-        char exp[] = {'{','(',')','}','[',']'}; 
-        if (bp.areParenthesisBalanced(exp)) {
-        System.out.println("YES");            
-        } else {
-                System.out.println("NO");   
-        } 
+  }
+
+  /**
+   * Main function.
+   *
+   * @param      args  The arguments
+   */
+  public static void main(final String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+    int noOFLines = Integer.parseInt(sc.nextLine());
+    // System.out.println(noOFLines);
+
+    while (sc.hasNext()) {
+      // System.out.println("Reached");
+      String input = new String(sc.nextLine());
+      // System.out.println(input);
+      Balparen checkThisString = new Balparen(input);
+      if (checkThisString.isBalanced()) {
+        System.out.println("YES");
+      } else {
+        System.out.println("NO");
+      }
     }
+  }
+
 }
