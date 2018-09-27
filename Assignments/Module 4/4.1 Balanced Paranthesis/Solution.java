@@ -12,9 +12,9 @@ public final class Solution {
         BalancedParan bp = new BalancedParan();
         char exp[] = {'{','(',')','}','[',']'}; 
         if (bp.areParenthesisBalanced(exp)) {
-        System.out.println("Balanced ");            
+        System.out.println("YES");            
         } else {
-                System.out.println("Not Balanced ");   
+                System.out.println("NO");   
         } 
     }
 }
