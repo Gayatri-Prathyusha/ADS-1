@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class Solution {
     Solution() {
-        
+
     }
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String p = sc.nextLine();

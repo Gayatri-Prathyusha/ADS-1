@@ -1,4 +1,4 @@
-import java.lang.String;
+
 class AddLargeNumbers {
 	AddLargeNumbers() {
 
@@ -27,7 +27,7 @@ class AddLargeNumbers {
     }
 
 
-    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2)throws Exception {
     	LinkedList lis1 = new LinkedList();
         Stacks s1 = new Stacks();
         Iterator flow1 = new Iterator(list1.getHead());
