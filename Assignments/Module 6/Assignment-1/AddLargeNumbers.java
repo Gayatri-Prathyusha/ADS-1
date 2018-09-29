@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.lang.String;
 class AddLargeNumbers {
 	AddLargeNumbers() {
 
