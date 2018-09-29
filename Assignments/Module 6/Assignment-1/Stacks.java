@@ -4,22 +4,22 @@ public class Stacks<E> {
 	/**
 	 * Using Linked Lists.
 	 */
-	LinkedList<E> list;
+	LinkedListGeneric<E> newlist;
 
 	Stacks() {
-		list = new LinkedList<>();
+		newlist = new LinkedListGeneric<>();
 	}
 
 	public boolean isEmpty() {
-		return list.isEmpty1();
+		return newlist.isEmpty1();
 	}
 
 	public void push(E e) {
-		list.addData(e);
+		newlist.add1(e);
 	}
 
 	public E pop() {
-		E c = list.remove();
+		E c = newlist.remove();
 		return c;
 	}
 }

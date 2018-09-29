@@ -4,20 +4,31 @@ class AddLargeNumbers {
 	}
     
     public static LinkedList numberToDigits(String number) {
-    	LinkedList num = new LinkedList();
+    	LinkedList digits = new LinkedList();
     	for(int i =0; i < number.length(); i++) {
-    		num.addData(number.charAt(i));
+    		digits.addData(number.charAt(i));
     	}
-    return num;
+    return digits;
 }
 
     public static String digitsToNumber(LinkedList list) {
-    	return null;
+        String num = "";
+        String num1 = "";
+        Iterator flow = new Iterator(list.getFirst());
+        while (flow.hasNext()) {
+            num += flow.next();
+        }
 
+        for (int i = num.length() - 1; i >= 0; i--) {
+            num1 += num.charAt(i);
+        }
+        return num1;
     }
 
+
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-    	return null;
+        LinkedList lis = new LinkedList();
+        return lis;
 
     }
 }
