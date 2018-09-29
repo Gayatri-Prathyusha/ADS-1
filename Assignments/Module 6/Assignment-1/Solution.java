@@ -1,13 +1,9 @@
 import java.util.Scanner;
 /**
- * Main class
+ * Main class.
  */
-public class Solution {
-    /**
-     * class
-     *
-     * @return     { description_of_the_return_value }
-     */
+public final class Solution {
+
     private Solution() {
         /**
          * Empty constructor to avoid checkstyle.
@@ -21,12 +17,12 @@ public class Solution {
      *
      * @throws     Exception  { exception_description }
      */
-    public static void main(String[] args)throws Exception {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String p = sc.nextLine();
         String q = sc.nextLine();
-        switch(input) {
+        switch (input) {
             case "numberToDigits":
                 LinkedList pDigits = AddLargeNumbers.numberToDigits(p);
                 LinkedList qDigits = AddLargeNumbers.numberToDigits(q);
@@ -37,12 +33,12 @@ public class Solution {
             case "addLargeNumbers":
                 LinkedList pDigits1 = AddLargeNumbers.numberToDigits(p);
                 LinkedList qDigits1 = AddLargeNumbers.numberToDigits(q);
-                LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits1, qDigits1);
+                LinkedList result = AddLargeNumbers.addLargeNumbers(
+                    pDigits1, qDigits1);
                 System.out.println(AddLargeNumbers.digitsToNumber(result));
                 break;
             default:
                 break;
         }
     }
-    
 }
