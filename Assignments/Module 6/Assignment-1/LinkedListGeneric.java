@@ -24,9 +24,9 @@ class LinkedListGeneric<E> {
 		node.data = e;
 		node.next = head;
 
-		if (head == node) {
-			head = node;
-		}
+		// if (head == node) {
+		// 	head = node;
+		// }
 
 		head = node;
 	}
