@@ -1,4 +1,4 @@
-class Node {
+public class Node {
 	char data;
 	Node next;
 
@@ -9,12 +9,11 @@ class Node {
 		this.next = null;
 	}
 }
-
 class Iterator {
 	Node current;
 
-	public Iterator(Node first) {
-		current = first;
+	public Iterator(Node head) {
+		current = head;
 	}
 
 	public boolean hasNext() {
@@ -28,23 +27,23 @@ class Iterator {
 	}
 }
 
-public class LinkedList {
+class LinkedList {
 
 
-	private Node first;
+	private Node head;
 
 	public void addData(char item) {
 		Node temp = new Node(item);
-		temp.next = first;
-		first = temp;
+		temp.next = head;
+		head = temp;
 	}
 
 	public boolean isEmpty1() {
-		return first == null;
+		return head == null;
 	}
 
-	public Node getFirst() {
-		return first;
+	public Node getHead() {
+		return head;
 	}
 
 	public char getData(Node node) {
@@ -56,9 +55,9 @@ public class LinkedList {
 	}
 
 	public void print() {
-		Node temp = first;
+		Node temp = head;
 		while (temp != null) {
-			System.out.println(temp.data + "-->");
+			System.out.println(temp.data + " ");
 			temp = temp.next;
 		}
 	}
