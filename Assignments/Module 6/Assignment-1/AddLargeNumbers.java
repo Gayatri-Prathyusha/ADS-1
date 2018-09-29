@@ -40,10 +40,10 @@ class AddLargeNumbers {
             s2.push(flow2.next());
         }
         int carryvalue = 0;
-        while (!s1.isEmpty() && !s2.isEmpty()) {
+        while (!s1.isEmpty() && !s2.isEmpty() ) {
             int sum = 0;
-            int digit1 = (int) s1.pop();
-            int digit2 = (int) s2.pop();
+            int digit1 = Integer.parseInt(s1.pop()+"");
+            int digit2 = Integer.parseInt(s2.pop()+"");
             if (carryvalue == 0) {
                 sum = digit1 + digit2;
             } else if (carryvalue == 1) {
@@ -62,7 +62,7 @@ class AddLargeNumbers {
         }
         while (!s1.isEmpty() && s2.isEmpty()) {
             int sum = 0;
-            int digit1 =(int) s1.pop();
+            int digit1 =Integer.parseInt(s1.pop()+"");
             if (carryvalue == 0) {
                 sum = digit1;
             } else if (carryvalue == 1) {
@@ -79,7 +79,7 @@ class AddLargeNumbers {
 
         while (!s2.isEmpty() && s1.isEmpty()) {
             int sum = 0;
-            int digit2 =(int) s1.pop();
+            int digit2 =Integer.parseInt(s2.pop()+"");
             if (carryvalue == 0) {
                 sum = digit2;
             } else if (carryvalue == 1) {
