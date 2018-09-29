@@ -5,9 +5,9 @@ class AddLargeNumbers {
     
     public static LinkedList numberToDigits(String number) {
     	LinkedList num = new LinkedList();
-        for (int i = 0; i < number.length(); i++) {
-            num.addData(number.charAt(i));
-    }
+    	for(int i =0; i < number.length(); i++) {
+    		num.addData(number.charAt(i));
+    	}
     return num;
 }
 
