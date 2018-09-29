@@ -4,9 +4,12 @@ import java.util.Scanner;
  */
 public final class Solution {
 
+    /**
+     * Constructor to avoid checkstyle.
+     */
     private Solution() {
         /**
-         * Empty constructor to avoid checkstyle.
+         * Empty constructor.
          */
 
     }
