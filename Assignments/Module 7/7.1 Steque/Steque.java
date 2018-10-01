@@ -6,6 +6,10 @@ public class Steque<E> {
 	 */
 	LinkedListGeneric<E> newlist;
 
+	/**
+	 * Constructs the object.
+	 * Time complexity : 1.
+	 */
 	Steque() {
 		newlist = new LinkedListGeneric<>();
 	}
@@ -14,6 +18,13 @@ public class Steque<E> {
 		return newlist.isEmpty1();
 	}
 
+	
+	/**
+	 * Inserts elements at the begining of the list.
+	 * Time complexity : 1
+	 *
+	 * @param      e     { parameter_description }
+	 */
 	public void push(E e) {
 		//Node old = head;
 		//head = new Node(data, old);
@@ -23,6 +34,12 @@ public class Steque<E> {
 		newlist.add1(e);
 		System.out.println(newlist);
 	}
+	/**
+	 * delets elements at the begining of the list.
+	 * Time complexity : 1
+	 *
+	 * @param      e     { parameter_description }
+	 */
 
 	public void pop() {
 		if(isEmpty()) {
@@ -33,6 +50,12 @@ public class Steque<E> {
 	}
 }
 
+	/**
+	 * Inserts elements at the end of the list.
+	 * Time complexity : 1
+	 *
+	 * @param      e     { parameter_description }
+	 */
 	public void enqueue(E ele) {
 		newlist.addlast(ele);
 		System.out.println(newlist);
