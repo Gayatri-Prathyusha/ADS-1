@@ -23,7 +23,7 @@ public final class Solution {
 
             while (sc.hasNext()) {
                 String[] tokens = sc.nextLine().split(" ");
-                if(tokens[0].equals("")) {
+                if (tokens[0].equals("")) {
                     System.out.println();
                 }
                 switch (tokens[0]) {
