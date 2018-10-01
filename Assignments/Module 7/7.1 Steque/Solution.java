@@ -20,7 +20,6 @@ public final class Solution {
         int n = Integer.parseInt(sc.nextLine());
         if (n > 0) {
             for (int i = 0; i < n; i++) {
-
             while (sc.hasNext()) {
                 String[] tokens = sc.nextLine().split(" ");
                 if (tokens[0].equals("")) {

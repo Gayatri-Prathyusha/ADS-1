@@ -15,13 +15,18 @@ public class Steque<E> {
 	}
 
 	public void push(E e) {
+		//Node old = head;
+		//head = new Node(data, old);
+		//if (e == null) {
+		//tail = head;
+		//}
 		newlist.add1(e);
 		System.out.println(newlist);
 	}
 
 	public void pop() {
 		if(isEmpty()) {
-			System.out.println("Steque is empty.");
+			// System.out.println("Steque is empty.");
 		} else {
 		newlist.remove();
 		System.out.println(newlist);
