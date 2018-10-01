@@ -70,6 +70,12 @@ class LinkedListGeneric<E> {
 }
 
 	public void remove() {
+		if(size == 1){
+			tail = head = null;
+			size = 0;
+			return;
+
+		}
 
 		E data = head.data;
 		head = head.next;
