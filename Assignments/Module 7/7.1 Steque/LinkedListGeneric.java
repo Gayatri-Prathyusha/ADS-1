@@ -69,11 +69,11 @@ class LinkedListGeneric<E> {
 		if(head == null) {
 			System.out.println("Steque is empty.");
 
-		} else {
+		}
 		E data = head.data;
 		head = head.next;
 		//return data;
-	}
+
 }
 
 	public boolean isEmpty1() {
