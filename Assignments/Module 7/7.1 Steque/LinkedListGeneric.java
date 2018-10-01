@@ -78,9 +78,9 @@ class LinkedListGeneric<E> {
 
 	public String toString() {
         String result = "";
-        // if (head == null) {
-        //     return "Steque is empty.";
-        // }
+        if (head == null) {
+            return "Steque is empty.";
+        }
         result = result + head.getData();
         Node temp = head.getNext();
         while (temp != null) {

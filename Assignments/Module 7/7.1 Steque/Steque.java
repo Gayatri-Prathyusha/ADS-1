@@ -20,12 +20,12 @@ public class Steque<E> {
 	}
 
 	public void pop() {
-		if(isEmpty()) {
-			System.out.println("Steque is empty.");
-		} else {
+		// if(isEmpty()) {
+		// 	System.out.println("Steque is empty.");
+		// } else {
 		newlist.remove();
 		System.out.println(newlist);
-	}
+	
 }
 
 	public void enqueue(E ele) {
