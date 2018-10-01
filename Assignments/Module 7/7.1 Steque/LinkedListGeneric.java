@@ -66,14 +66,13 @@ class LinkedListGeneric<E> {
 }
 
 	public void remove() {
-		if(head == null) {
-			System.out.println("Steque is empty.");
+		// if(head == null) {
+		// 	System.out.println("Steque is empty.");
 
-		} else {
+		// } else {
 		E data = head.data;
 		head = head.next;
 		//return data;
-	    }
 	}
 
 	public boolean isEmpty1() {
@@ -83,7 +82,7 @@ class LinkedListGeneric<E> {
 	public String toString() {
         String result = "";
         if (head == null) {
-            return result;
+            return "Steque is empty.";
         }
         result = result + head.getData();
         Node temp = head.getNext();
