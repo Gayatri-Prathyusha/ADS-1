@@ -34,7 +34,7 @@ public final class Solution {
                     steak.enqueue(Integer.parseInt(tokens[1]));
                     break;
                     default:
-                    steak = new Steque();
+                    // steak = new Steque();
                     break;
                     }
                 }
