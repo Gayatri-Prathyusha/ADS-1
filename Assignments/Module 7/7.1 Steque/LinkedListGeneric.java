@@ -91,7 +91,7 @@ class LinkedListGeneric<E> {
             result = result + ", " + temp.getData();
             temp = temp.getNext();
             }
-        return result + "\n";
+        return result;
         
     }
 
