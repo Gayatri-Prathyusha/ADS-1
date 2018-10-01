@@ -65,10 +65,15 @@ class LinkedListGeneric<E> {
 
 }
 
-	public E remove() {
+	public void remove() {
+		if(head == null) {
+			System.out.println("Steque is empty.");
+
+		} else {
 		E data = head.data;
 		head = head.next;
-		return data;
+		//return data;
+	    }
 	}
 
 	public boolean isEmpty1() {

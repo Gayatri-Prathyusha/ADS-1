@@ -20,9 +20,6 @@ public class Steque<E> {
 	}
 
 	public void pop() {
-		if(newlist == null){
-			System.out.println("Steque is empty.");
-		}
 		newlist.remove();
 		System.out.println(newlist);
 	}
