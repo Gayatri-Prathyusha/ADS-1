@@ -15,7 +15,6 @@ class Solution {
 		    	switch (tokens[0]) {
 		    		case "push":
 		    		steak.push(Integer.parseInt(tokens[1]));
-		    		
 		    		break;
 		    		case "pop":
 		    		steak.pop();

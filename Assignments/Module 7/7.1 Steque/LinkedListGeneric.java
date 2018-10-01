@@ -83,14 +83,15 @@ class LinkedListGeneric<E> {
         String result = "";
         if (head == null) {
             return "Steque is empty.";
-        }
+        } else {
         result = result + head.getData();
         Node temp = head.getNext();
         while (temp != null) {
             result = result + ", " + temp.getData();
             temp = temp.getNext();
-        }
+            }
         return result;
+        }
     }
 
 }
