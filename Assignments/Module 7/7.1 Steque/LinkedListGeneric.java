@@ -57,11 +57,11 @@ class LinkedListGeneric<E> {
 			tail = head = node;
 			
 
-		}
+		} else {
 		Node node= new Node();
 		node.data = e;
 		tail.next = node;
-	
+	}
 
 }
 
