@@ -37,6 +37,7 @@ class LinkedListGeneric<E> {
 	}
 	private Node head;
 	private Node tail;
+	private int size = 0;
 
 	public void add1(E e) {
 		Node node = new Node();
@@ -49,6 +50,7 @@ class LinkedListGeneric<E> {
 		}
 
 		head = node;
+		size++;
 	}		
 	public void addlast(E e) {
 		if(head == null && tail == null) {
@@ -63,6 +65,7 @@ class LinkedListGeneric<E> {
 		tail.next = node;
 		tail = node;
 	}
+	size++;
 
 }
 
@@ -70,6 +73,7 @@ class LinkedListGeneric<E> {
 
 		E data = head.data;
 		head = head.next;
+		size--;
 }
 
 	public boolean isEmpty1() {
