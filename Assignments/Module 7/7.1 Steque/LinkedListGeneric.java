@@ -61,6 +61,7 @@ class LinkedListGeneric<E> {
 		Node node= new Node();
 		node.data = e;
 		tail.next = node;
+		tail = node;
 	}
 
 }
