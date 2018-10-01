@@ -19,7 +19,7 @@ class LinkedListGeneric<E> {
         return next;
     }
 
-    public void setNext(final Node node) {
+    public void setNext(Node node) {
         next = node;
     }
 
@@ -27,7 +27,7 @@ class LinkedListGeneric<E> {
         return data;
     }
 
-    public void setdata(final E elem) {
+    public void setdata(E elem) {
         data = elem;
     }
 
@@ -66,10 +66,10 @@ class LinkedListGeneric<E> {
 }
 
 	public void remove() {
-		if(head == null) {
-			System.out.println("Steque is empty.");
+		// if(head == null) {
+		// 	System.out.println("Steque is empty.");
 
-		}
+		// }
 		E data = head.data;
 		head = head.next;
 		//return data;
