@@ -83,7 +83,7 @@ class LinkedListGeneric<E> {
         result = result + head.getData();
         Node temp = head.getNext();
         while (temp != null) {
-            result = result + "" + temp.getData();
+            result = result + ", " + temp.getData();
             temp = temp.getNext();
         }
         return result;
