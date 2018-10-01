@@ -1,5 +1,8 @@
 import java.util.Scanner;
-public class Solution {
+/**
+ * Solution class for main.
+ */
+public final class Solution {
     /**
      * Empty Constructor for checkstyle.
      */
