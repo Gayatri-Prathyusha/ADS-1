@@ -64,7 +64,7 @@ class LinkedList {
     node.next = newnode.next;
     newnode.next = node;
 
-    return temp.next;
+    return temp;
 }
 
 	public String[] reverse() {
