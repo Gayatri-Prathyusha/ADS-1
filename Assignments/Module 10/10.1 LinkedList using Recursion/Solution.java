@@ -4,21 +4,33 @@ class Solution {
 
 	}
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		LinkedList lst = new LinkedList();
-		String[] tokens = sc.nextLine().split(" ");
-		switch (tokens[0]){
-		case "insertAt" :
-		lst.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
-		System.out.println(lst);
-		break;
-		case "reverse":
-		lst.reverse();
-		break;
+        Scanner s= new Scanner(System.in);
+	    LinkedList list = new LinkedList();
+		while(s.hasNextLine()) {
+			String[] input = s.nextLine().split(" ");
+			switch (input[0]) {
+				case "insertAt" :
+				try {
+				list.insertAt(Integer.parseInt(input[1]),input[2]);
+				System.out.println(list);
+			}
+				catch (Exception e) {
+					System.out.println("Can't insert at this position.");
+				}
+				break;
+				case "reverse" : 
+				try{
+				list.reverse();
+				System.out.println(list);				
+			}
+				catch(Exception e) {
+				System.out.println("No elements to reverse.");
+				}
+				break;
 		default:
 		break;
 
 	    }
     }
-
+}
 }

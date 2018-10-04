@@ -2,16 +2,16 @@ class LinkedList {
 
 	private class Node {
 
-		int data;
+		String data;
 		Node next;
 
 		Node() {}
 
-		Node(int data) {
+		Node(String data) {
 			this(data, null);
 		}
 
-		Node(int data, Node next) {
+		Node(String data, Node next) {
 			this.data = data;
 			this.next = next;
 		}
@@ -23,11 +23,11 @@ class LinkedList {
         next = node;
     }
 
-    public int getData() {
+    public String getData() {
         return data;
     }
 
-    public void setdata(int elem) {
+    public void setdata(String elem) {
         data = elem;
     }
 
@@ -50,45 +50,40 @@ class LinkedList {
 // 	}
 // }
 
-	public Node insertAt(int data, int position) {
-	    Node newNode = new Node();
-	    newNode.data = data;
-	    newNode.next = null;
 
-	    if (head == null) {
-	        return newNode;
-	    }
-	    if (position == 0) {
-	        newNode.next = head;
-	        head = newNode;
-	        return head;
-	    } else {
-	    Node prev = null;
-	    Node current = head;
-	    int i = 0;
-	    while (current !=null && i < position) {
-	        prev = current;
-	        current = current.next;
-	        i++;
-	    }
-	    newNode.next = prev.next;
-	    prev.next = newNode;
-	    return head;
-	}
-}
-
-	public String[] reverse() {
-		if (head == null){
-			System.out.println("No elements to reverse.");
+	public void insertAt(int pos, String val)throws Exception{
+		if (pos<0 || pos>size) {
+		throw new Exception();			
 		}
-		return null;
-
-	}		
-
-	public boolean isEmpty1() {
-		return head == null;
+		Node obj = new Node(val);
+		/*if (pos==0) {
+			obj.next =head;
+			head =obj;
+			size++;
+			return;
+		}*/
+		head=insertAt(pos,head,obj,0);
 	}
-
+	public Node insertAt(int pos, Node first, Node obj, int count) throws Exception{
+		if (pos == count) {
+			obj.next =first;
+			size++;
+			return obj;
+		}
+		first.next = insertAt(pos,first.next,obj,count+1);
+		return first;
+	}
+	public void reverse(){
+		reverse(null,head);
+	}
+	public void reverse(Node previous, Node current){
+		if (current!=null) {
+			reverse(current,current.next);
+			current.next= previous;
+		}else {
+			head =previous;
+		}
+	}
 
 	/**
 	 * 
