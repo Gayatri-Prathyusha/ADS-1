@@ -51,20 +51,30 @@ class LinkedList {
 // }
 
 	public Node insertAt(int data, int position) {
-    Node temp = new Node();
-    temp.next = head;
+	    Node newNode = new Node();
+	    newNode.data = data;
+	    newNode.next = null;
 
-    Node newnode = temp;
-    for (int i = 0; i < position-1; ++i) {
-        newnode = newnode.next;
-    }
-
-    Node node = new Node();
-    node.data = data;
-    node.next = newnode.next;
-    newnode.next = node;
-
-    return temp;
+	    if (head == null) {
+	        return newNode;
+	    }
+	    if (position == 0) {
+	        newNode.next = head;
+	        head = newNode;
+	        return head;
+	    } else {
+	    Node prev = null;
+	    Node current = head;
+	    int i = 0;
+	    while (current !=null && i < position) {
+	        prev = current;
+	        current = current.next;
+	        i++;
+	    }
+	    newNode.next = prev.next;
+	    prev.next = newNode;
+	    return head;
+	}
 }
 
 	public String[] reverse() {
