@@ -19,7 +19,7 @@ class Solution {
 				}
 				break;
 				case "reverse" : 
-				try{
+				try {
 				list.reverse();
 				System.out.println(list);				
 			}
