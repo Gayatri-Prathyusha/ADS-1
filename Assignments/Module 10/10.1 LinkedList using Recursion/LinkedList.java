@@ -55,7 +55,7 @@ class LinkedList {
     temp.next = head;
 
     Node newnode = temp;
-    for (int i = 0; i < position; ++i) {
+    for (int i = 0; i < position-1; ++i) {
         newnode = newnode.next;
     }
 
