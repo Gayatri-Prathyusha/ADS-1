@@ -24,40 +24,68 @@ class LinkedList {
 			this.data = data;
 			this.next = next;
 		}
+	/**
+	 * Gets the next.
+	 *
+	 * @return     The next.
+	 */
 	public Node getNext() {
         return next;
     }
 
+    /**
+     * Sets the next.
+     *
+     * @param      node  The node
+     */
     public void setNext(Node node) {
         next = node;
     }
 
+    /**
+     * 
+     *
+     * @return     The data.
+     */
     public String getData() {
         return data;
     }
 
+    /**
+     * { function_description }
+     *
+     * @param      elem  The element
+     */
     public void setdata(String elem) {
         data = elem;
     }
 
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return data + "";
     }
 	}
+	/**
+	 * head value.
+	 */
 	private Node head;
+	/**
+	 * size of the list.
+	 */
 	private int size = 0;
-
-// 	public Node insertAt(int data, int position) {
-//     if (position == 0) {
-//         Node node = new Node();
-//         node.data = data;
-//         node.next = head;
-//         return head;
-//     } else {
-//     head.next = insertAt(data, position - 1);
-//     return head;
-// 	}
-// }
+	
+	/**
+	 * Insert the value at the position.
+	 *
+	 * @param      pos        The position
+	 * @param      val        The value
+	 *
+	 * @throws     Exception  { whent the index value is invalid }.
+	 */
 	public void insertAt(int pos, String val)throws Exception{
 		if (pos<0 || pos>size) {
 		throw new Exception();			
@@ -67,6 +95,19 @@ class LinkedList {
 	}
 
 
+	/**
+	 * Insertion of the node at a particular index when the 
+	 * list is not empty. this is a recursive call.
+	 *
+	 * @param      pos        The position
+	 * @param      first      The first
+	 * @param      obj        The object
+	 * @param      count      The count
+	 *
+	 * @return     { Node  }.
+	 *
+	 * @throws     Exception  { When the index value given is invalid}
+	 */
 	public Node insertAt(int pos, Node first, Node obj, int count) throws Exception{
 		if (pos == count) {
 			obj.next =first;
@@ -78,11 +119,20 @@ class LinkedList {
 	}
 
 
+	/**
+	 * reverse with no parameters.
+	 */
 	public void reverse(){
 		reverse(null,head);
 	}
 
 
+	/**
+	 * reverse of the function.
+	 *
+	 * @param      previous  The previous node
+	 * @param      current   The current node
+	 */
 	public void reverse(Node previous, Node current){
 		if (current!=null) {
 			reverse(current,current.next);
@@ -98,7 +148,7 @@ class LinkedList {
 	 * Time complexity : N.
 	 * n is the size of list.
 	 *
-	 * @param      result     String of the output.
+	 * @return  result     String of the output.
 	 */
 	public String toString() {
         String result = "";
