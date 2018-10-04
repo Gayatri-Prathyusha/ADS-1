@@ -43,12 +43,10 @@ class LinkedList {
         Node node = new Node();
         node.data = data;
         node.next = head;
-        return node;
-    } else {
+        return head;
+    }
     head.next = insertAt(data, position - 1);
     return head;
-    }
-
 	}
 	public String[] reverse() {
 		if (head == null){
