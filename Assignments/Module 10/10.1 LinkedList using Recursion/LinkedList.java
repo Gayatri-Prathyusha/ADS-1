@@ -1,7 +1,7 @@
 /**
  * List of linkeds.
  */
-class LinkedList {
+public class LinkedList {
 
 	/**
 	 * Class for node.
@@ -20,7 +20,7 @@ class LinkedList {
 			this(data, null);
 		}
 
-		Node(String data, Node next) {
+		Node(final String data, final Node next) {
 			this.data = data;
 			this.next = next;
 		}
@@ -38,7 +38,7 @@ class LinkedList {
      *
      * @param      node  The node
      */
-    public void setNext(Node node) {
+    public void setNext(final Node node) {
         next = node;
     }
 
@@ -56,7 +56,7 @@ class LinkedList {
      *
      * @param      elem  The element
      */
-    public void setdata(String elem) {
+    public void setdata(final String elem) {
         data = elem;
     }
 
@@ -86,7 +86,7 @@ class LinkedList {
 	 *
 	 * @throws     Exception  { whent the index value is invalid }.
 	 */
-	public void insertAt(int pos, String val)throws Exception{
+	public void insertAt(final int pos, final String val)throws Exception{
 		if (pos<0 || pos>size) {
 		throw new Exception();			
 		}
@@ -108,25 +108,22 @@ class LinkedList {
 	 *
 	 * @throws     Exception  { When the index value given is invalid}
 	 */
-	public Node insertAt(int pos, Node first, Node obj, int count) throws Exception{
+	public Node insertAt(final int pos, final Node first,
+	final Node obj, final int count) throws Exception{
 		if (pos == count) {
-			obj.next =first;
+			obj.next = first;
 			size++;
 			return obj;
 		}
 		first.next = insertAt(pos,first.next,obj,count+1);
 		return first;
 	}
-
-
 	/**
 	 * reverse with no parameters.
 	 */
 	public void reverse(){
 		reverse(null,head);
 	}
-
-
 	/**
 	 * reverse of the function.
 	 *
@@ -141,8 +138,6 @@ class LinkedList {
 			head =previous;
 		}
 	}
-
-
 	/**
 	 * 
 	 * Time complexity : N.
@@ -158,8 +153,6 @@ class LinkedList {
             result = result + ", " + temp.getData();
             temp = temp.getNext();
             }
-        return result;
-        
+        return result;   
     }
-
 }
