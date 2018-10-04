@@ -50,6 +50,9 @@ class LinkedList {
 
 	}
 	public String[] reverse() {
+		if (head == null){
+			System.out.println("No elements to reverse.");
+		}
 		return null;
 
 	}		
