@@ -10,6 +10,7 @@ class Solution {
 		switch (tokens[0]){
 		case "insertAt" :
 		lst.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+		System.out.println(lst);
 		break;
 		case "reverse":
 		lst.reverse();
