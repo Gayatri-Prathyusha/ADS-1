@@ -16,13 +16,24 @@ public class LinkedList {
 		 */
 		Node() {}
 
-		Node(String data) {
-			this(data, null);
+		/**
+		 * Constructs the object.
+		 *
+		 * @param      data  The data
+		 */
+		Node(String data1) {
+			this(data1, null);
 		}
 
-		Node(final String data, final Node next) {
-			this.data = data;
-			this.next = next;
+		/**
+		 * Constructs a parameterized constructor for the object.
+		 *
+		 * @param      data  The data
+		 * @param      next  The next
+		 */
+		Node(final String data1, final Node next1) {
+			this.data = data1;
+			this.next = next1;
 		}
 	/**
 	 * Gets the next.
@@ -43,7 +54,7 @@ public class LinkedList {
     }
 
     /**
-     * 
+     *
      *
      * @return     The data.
      */
@@ -52,7 +63,7 @@ public class LinkedList {
     }
 
     /**
-     * { function_description }
+     * { sets the data value }.
      *
      * @param      elem  The element
      */
@@ -77,7 +88,6 @@ public class LinkedList {
 	 * size of the list.
 	 */
 	private int size = 0;
-	
 	/**
 	 * Insert the value at the position.
 	 *
@@ -86,17 +96,17 @@ public class LinkedList {
 	 *
 	 * @throws     Exception  { whent the index value is invalid }.
 	 */
-	public void insertAt(final int pos, final String val)throws Exception{
-		if (pos<0 || pos>size) {
-		throw new Exception();			
+	public void insertAt(final int pos, final String val)throws Exception {
+		if (pos < 0 || pos > size) {
+		throw new Exception();	
 		}
 		Node obj = new Node(val);
-		head=insertAt(pos,head,obj,0);
+		head = insertAt(pos, head, obj, 0);
 	}
 
 
 	/**
-	 * Insertion of the node at a particular index when the 
+	 * Insertion of the node at a particular index when the
 	 * list is not empty. this is a recursive call.
 	 *
 	 * @param      pos        The position
@@ -109,20 +119,20 @@ public class LinkedList {
 	 * @throws     Exception  { When the index value given is invalid}
 	 */
 	public Node insertAt(final int pos, final Node first,
-	final Node obj, final int count) throws Exception{
+	final Node obj, final int count) throws Exception {
 		if (pos == count) {
 			obj.next = first;
 			size++;
 			return obj;
 		}
-		first.next = insertAt(pos,first.next,obj,count+1);
+		first.next = insertAt(pos, first.next, obj, count + 1);
 		return first;
 	}
 	/**
 	 * reverse with no parameters.
 	 */
-	public void reverse(){
-		reverse(null,head);
+	public void reverse() {
+		reverse(null, head);
 	}
 	/**
 	 * reverse of the function.
@@ -130,16 +140,16 @@ public class LinkedList {
 	 * @param      previous  The previous node
 	 * @param      current   The current node
 	 */
-	public void reverse(Node previous, Node current){
-		if (current!=null) {
-			reverse(current,current.next);
-			current.next= previous;
-		}else {
-			head =previous;
+	public void reverse(final Node previous, final Node current) {
+		if (current != null) {
+			reverse(current, current.next);
+			current.next = previous;
+		} else {
+			head = previous;
 		}
 	}
 	/**
-	 * 
+	 *
 	 * Time complexity : N.
 	 * n is the size of list.
 	 *
@@ -153,6 +163,6 @@ public class LinkedList {
             result = result + ", " + temp.getData();
             temp = temp.getNext();
             }
-        return result;   
+        return result;
     }
 }
