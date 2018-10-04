@@ -38,17 +38,35 @@ class LinkedList {
 	private Node head;
 	private int size = 0;
 
+// 	public Node insertAt(int data, int position) {
+//     if (position == 0) {
+//         Node node = new Node();
+//         node.data = data;
+//         node.next = head;
+//         return head;
+//     } else {
+//     head.next = insertAt(data, position - 1);
+//     return head;
+// 	}
+// }
+
 	public Node insertAt(int data, int position) {
-    if (position == 0) {
-        Node node = new Node();
-        node.data = data;
-        node.next = head;
-        return head;
-    } else {
-    head.next = insertAt(data, position - 1);
-    return head;
-	}
+    Node temp = new Node();
+    temp.next = head;
+
+    Node newnode = temp;
+    for (int i = 0; i < position; ++i) {
+        newnode = newnode.next;
+    }
+
+    Node node = new Node();
+    node.data = data;
+    node.next = newnode.next;
+    newnode.next = node;
+
+    return temp.next;
 }
+
 	public String[] reverse() {
 		if (head == null){
 			System.out.println("No elements to reverse.");
