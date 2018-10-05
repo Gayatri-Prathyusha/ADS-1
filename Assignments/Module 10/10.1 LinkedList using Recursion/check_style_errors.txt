@@ -1,18 +1,5 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:11:17: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:11:24: Variable 'data' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:12:17: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:12:22: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:17:25: '{' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:17:25: '}' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:22:20: Unused @param tag for 'data'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:24:22: Parameter data1 should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:24:29: Expected @param tag for 'data1'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:31:20: Unused @param tag for 'data'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:32:20: Unused @param tag for 'next'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:34:35: Expected @param tag for 'data1'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:34:53: Expected @param tag for 'next1'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:101: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:22: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 10/10.1 LinkedList using Recursion/LinkedList.java:109: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 2 errors.
