@@ -23,7 +23,7 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         LinkedList list = new LinkedList();
-        while(s.hasNextLine()) {
+        while (s.hasNextLine()) {
             String[] input = s.nextLine().split(" ");
             switch (input[0]) {
                 case "insertAt":
@@ -38,7 +38,7 @@ public final class Solution {
                 try {
                     list.reverse();
                     System.out.println(list);
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println("No elements to reverse.");
                 }
                 break;
