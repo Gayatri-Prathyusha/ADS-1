@@ -1,3 +1,6 @@
+/**
+ * Scanner for checkstyle.
+ */
 import java.util.Scanner;
 
 /**
@@ -13,7 +16,7 @@ public final class Solution {
          */
     }
     /**
-     * { function_description }
+     * Main Function.
      *
      * @param      args  The arguments
      */
@@ -28,7 +31,7 @@ public final class Solution {
                 list.insertAt(Integer.parseInt(input[1]), input[2]);
                 System.out.println(list);
             }
-                catch (final Exception e) {
+                catch (Exception e) {
                     System.out.println("Can't insert at this position.");
                 }
                 break;
@@ -37,7 +40,7 @@ public final class Solution {
                 list.reverse();
                 System.out.println(list);
             }
-                catch(final Exception e) {
+                catch(Exception e) {
                 System.out.println("No elements to reverse.");
                 }
                 break;
