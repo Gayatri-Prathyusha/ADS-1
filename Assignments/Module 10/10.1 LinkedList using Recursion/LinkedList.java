@@ -1,8 +1,15 @@
 /**
  * List of linkeds.
  */
-public class LinkedList {
-
+public final class LinkedList {
+    /**
+     * Constructs the object.
+     */
+    protected LinkedList() {
+        /**
+         * Empty Constructor.
+         */
+    }
     /**
      * Class for node.
      */
@@ -110,8 +117,6 @@ public class LinkedList {
         Node obj = new Node(val);
         head = insertAt(pos, head, obj, 0);
     }
-
-
     /**
      * Insertion of the node at a particular index when the
      * list is not empty. this is a recursive call.
