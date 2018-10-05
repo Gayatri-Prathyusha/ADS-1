@@ -28,7 +28,7 @@ public final class Solution {
                 list.insertAt(Integer.parseInt(input[1]), input[2]);
                 System.out.println(list);
             }
-                catch (Exception e) {
+                catch (final Exception e) {
                     System.out.println("Can't insert at this position.");
                 }
                 break;
@@ -37,7 +37,7 @@ public final class Solution {
                 list.reverse();
                 System.out.println(list);
             }
-                catch(Exception e) {
+                catch(final Exception e) {
                 System.out.println("No elements to reverse.");
                 }
                 break;
