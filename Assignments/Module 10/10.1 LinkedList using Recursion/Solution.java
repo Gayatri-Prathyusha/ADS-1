@@ -28,27 +28,25 @@ public final class Solution {
             switch (input[0]) {
                 case "insertAt":
                 try {
-                list.insertAt(Integer.parseInt(input[1]), input[2]);
-                System.out.println(list);
-            }
-                catch (Exception e) {
+                    list.insertAt(Integer.parseInt(input[1]), input[2]);
+                    System.out.println(list);
+                } catch (Exception e) {
                     System.out.println("Can't insert at this position.");
                 }
                 break;
                 case "reverse":
                 try {
-                list.reverse();
-                System.out.println(list);
-            }
-                catch(Exception e) {
-                System.out.println("No elements to reverse.");
+                    list.reverse();
+                    System.out.println(list);
+                } catch(Exception e) {
+                    System.out.println("No elements to reverse.");
                 }
                 break;
-        default:
-        break;
+                default:
+                break;
 
+            }
         }
     }
-}
 
 }
