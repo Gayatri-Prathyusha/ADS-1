@@ -23,7 +23,7 @@ public final class Solution {
         while(s.hasNextLine()) {
             String[] input = s.nextLine().split(" ");
             switch (input[0]) {
-                case "insertAt" :
+                case "insertAt":
                 try {
                 list.insertAt(Integer.parseInt(input[1]), input[2]);
                 System.out.println(list);
@@ -32,10 +32,10 @@ public final class Solution {
                     System.out.println("Can't insert at this position.");
                 }
                 break;
-                case "reverse" : 
+                case "reverse":
                 try {
                 list.reverse();
-                System.out.println(list);               
+                System.out.println(list);
             }
                 catch(Exception e) {
                 System.out.println("No elements to reverse.");
