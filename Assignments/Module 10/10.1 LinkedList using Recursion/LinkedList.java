@@ -19,7 +19,6 @@ public class LinkedList {
         /**
          * Constructs the object.
          */
-        
         Node() {
 
         }
@@ -106,7 +105,7 @@ public class LinkedList {
      */
     public void insertAt(final int pos, final String val)throws Exception {
         if (pos < 0 || pos > size) {
-        throw new Exception();  
+        throw new Exception();
         }
         Node obj = new Node(val);
         head = insertAt(pos, head, obj, 0);

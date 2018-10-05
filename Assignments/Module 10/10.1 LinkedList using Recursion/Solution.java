@@ -25,7 +25,7 @@ public final class Solution {
             switch (input[0]) {
                 case "insertAt" :
                 try {
-                list.insertAt(Integer.parseInt(input[1]),input[2]);
+                list.insertAt(Integer.parseInt(input[1]), input[2]);
                 System.out.println(list);
             }
                 catch (Exception e) {
