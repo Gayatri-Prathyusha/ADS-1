@@ -1,0 +1,16 @@
+Starting audit...
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:4:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:7:30: Variable 'newlist' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:17:9: Class 'Steque' looks like designed for extension (can be subclassed), but the method 'isEmpty' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Steque' final or making the method 'isEmpty' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:17:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:21: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:28:26: Parameter e should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:41:12: Unused @param tag for 'e'. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:45:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:57:12: Unused @param tag for 'e'. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:59:29: Parameter ele should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 7/7.1 Steque/Steque.java:59:31: Expected @param tag for 'ele'. [JavadocMethod]
+Audit done.
+Checkstyle ends with 13 errors.
