@@ -73,7 +73,7 @@ public final class Solution {
             students[size++] = eachStudent;
         }
         sc.close();
-        MergeSort.sort((Comparable[]) students);
+        MergeSort.sort(students);
         for (int i = 0; i < N; i++) {
             System.out.println(students[i]);
     

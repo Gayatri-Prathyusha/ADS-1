@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Class for student.
  */
-class Student {
+class Student implements Comparable<Student> {
     /**
      * name the student .
      */
