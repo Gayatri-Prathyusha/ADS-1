@@ -6,13 +6,13 @@ import java.util.Date;
  * Class for student.
  */
 class Student {
-    String studentname;
-    String date;
-    int subject1;
-    int subject2;
-    int subject3;
-    int totalmarks;
-    String reservationcategory;
+    private String studentname;
+    private Date date;
+    private int subject1;
+    private int subject2;
+    private int subject3;
+    private int totalmarks;
+    private String reservationcategory;
     /**
      * Constructs the object.
      */
@@ -32,9 +32,9 @@ class Student {
         studentname = inp[0];
         date = getDate();
         subject1 = Integer.parseInt(inp[2]);
-        subject2= Integer.parseInt(inp[3]);
-        subject3 = Integer.parseInt(inp[4]);
-        totalmarks = Integer.parseInt(inp[5]);
+        subject2= Integer.parseInt(inp[2 + 1]);
+        subject3 = Integer.parseInt(inp[2 + 2]);
+        totalmarks = Integer.parseInt(inp[2 + 2 + 1]);
         reservationcategory = inp[6];
     }
 
@@ -49,9 +49,9 @@ class Student {
      * @param      totalmarks1           The totalmarks 1
      * @param      reservationcategory1  The reservationcategory 1
      */
-    Student(String studentname1, String date1, int sub1,
-     int sub2, int sub3, int totalmarks1,
-      String reservationcategory1) {
+    Student(final String studentname1, final Date date1,final int sub1,
+     final int sub2, final int sub3, final int totalmarks1,
+      final String reservationcategory1) {
        this.studentname = studentname;
        this.date = date1;
        this.subject1 = sub1;
@@ -65,7 +65,7 @@ class Student {
      *
      * @return     The student name.
      */
-    public String getStudentName(){
+    public String getStudentName() {
         return studentname;
     }
 
@@ -74,7 +74,7 @@ class Student {
      *
      * @return     The date.
      */
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -85,7 +85,7 @@ class Student {
      */
     public int getSubject1() {
         return subject1;
-    } 
+    }
 
     /**
      * Gets the subject 2.
@@ -130,7 +130,7 @@ class Student {
      *
      * @return     { description_of_the_return_value }
      */
-    public int compareTo (Student other) {
+    public int compareTo(final Student other) {
         if (this.totalmarks > other.totalmarks) {
             return 1;
         }
@@ -140,22 +140,20 @@ class Student {
         if (this.subject3 > other.subject3) {
            return 1;
         }
-        if (this.subject3 < other.subject3){
+        if (this.subject3 < other.subject3) {
             return -1;
         }
         if (this.subject2 > other.subject2) {
-           return 1;  
+           return 1;
         }
         if (this.subject2 < other.subject2) {
              return -1;
         }
-        // if ((int)this.date > (int) other.date) {
+        // if (this.date > other.date) {
         //    return 1;
-  
         // }
         return 0;
     }
-
     /**
      * Returns a string representation of the object.
      * Time Complexity 1
@@ -166,7 +164,4 @@ class Student {
         return str + getStudentName() + " " + getTotalMarks()
             + " " + getReservationCategory();
      }
-
-
-
 }
