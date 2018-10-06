@@ -1,13 +1,2 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:9:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:10:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:11:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:12:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:13:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:14:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:15:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:35:17: '=' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:38:35: '6' is a magic number. [MagicNumber]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 12/Assignment-1/Student.java:52:57: ',' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 10 errors.

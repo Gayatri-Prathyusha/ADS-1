@@ -6,12 +6,33 @@ import java.util.Date;
  * Class for student.
  */
 class Student {
+    /**
+     * name the student .
+     */
     private String studentname;
+    /**
+     * date of birth of the student.
+     */
     private Date date;
+    /**
+     * Subject1 marks.
+     */
     private int subject1;
+    /**
+     * Subject 2 marks.
+     */
     private int subject2;
+    /**
+     * Subject 3 marks.
+     */
     private int subject3;
+    /**
+     * total marks obtained by the student.
+     */
     private int totalmarks;
+    /**
+     * reservation category of the student.
+     */
     private String reservationcategory;
     /**
      * Constructs the object.
@@ -32,10 +53,10 @@ class Student {
         studentname = inp[0];
         date = getDate();
         subject1 = Integer.parseInt(inp[2]);
-        subject2= Integer.parseInt(inp[2 + 1]);
+        subject2 = Integer.parseInt(inp[2 + 1]);
         subject3 = Integer.parseInt(inp[2 + 2]);
         totalmarks = Integer.parseInt(inp[2 + 2 + 1]);
-        reservationcategory = inp[6];
+        reservationcategory = inp[2 + 2 + 2];
     }
 
     /**
@@ -49,7 +70,7 @@ class Student {
      * @param      totalmarks1           The totalmarks 1
      * @param      reservationcategory1  The reservationcategory 1
      */
-    Student(final String studentname1, final Date date1,final int sub1,
+    Student(final String studentname1, final Date date1, final int sub1,
      final int sub2, final int sub3, final int totalmarks1,
       final String reservationcategory1) {
        this.studentname = studentname;
