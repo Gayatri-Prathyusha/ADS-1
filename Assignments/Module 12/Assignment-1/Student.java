@@ -56,6 +56,35 @@ class Student {
      public String getReservationCategory() {
         return reservationcategory;
      }
+     
+
+
+     public int compareTo (Student other) {
+        if (this.totalmarks > other.totalmarks) {
+            return 1;
+        }
+        if (this.totalmarks < other.totalmarks) {
+            return -1;
+        }
+        if (this.subject3 > other.subject3) {
+           return 1;
+        }
+        if (this.subject3 < other.subject3){
+            return -1;
+        }
+        if (this.subject2 > other.subject2) {
+           return 1;  
+        }
+        if (this.subject2 < other.subject2) {
+             return -1;
+        }
+        // if (this.date > other.date) {
+        //    return 1;
+  
+        // }
+        return 0;
+    }
+
      public String toString() {
         String str = "";
         return str + getStudentName() + " " + getTotalMarks()
