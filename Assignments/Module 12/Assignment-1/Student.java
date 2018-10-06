@@ -182,7 +182,7 @@ class Student implements Comparable<Student> {
      */
     public String toString() {
         String str = "";
-        return str + getStudentName() + " " + getTotalMarks()
-            + " " + getReservationCategory();
+        return str + getStudentName() + "," + getTotalMarks()
+            + "," + getReservationCategory();
      }
 }
