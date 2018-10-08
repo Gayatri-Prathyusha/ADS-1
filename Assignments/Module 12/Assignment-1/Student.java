@@ -170,11 +170,15 @@ class Student implements Comparable<Student> {
         if (this.subject2 < other.subject2) {
              return -1;
         }
-        // if (this.date > other.date) {
-        //    return 1;
-        // }
+        // return (this.date).compareTo(other.date);
+        // else {
         return 0;
-    }
+
+
+        }
+
+    
+
     /**
      * Returns a string representation of the object.
      * Time Complexity 1
