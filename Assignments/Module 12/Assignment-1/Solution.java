@@ -11,29 +11,29 @@ public final class Solution {
     private Solution() {
 
     }
-    public static Student[] seatsFilled (final Student[] stus,
+    public static Student[] seatsFilled (final Student[] studentsarr,
                                          final int totV,
                                          final int unres,
                                          final int bc, final int sc,
                                          final int st) {
 
         Student[] seats = new Student[totV];
-        for (int i = 0; i < unres; i++) seats[i] = stus[i];
+        for (int i = 0; i < unres; i++) seats[i] = studentsarr[i];
         int filled = unres;
-        int totSz = stus.length;
+        int totSz = studentsarr.length;
 
         for (int i = filled; bc > 0 && i < totSz; i++) {
-            if (filled < unres + bc && stus[i].getReservationCategory().equals("BC")
+            if (filled < unres + bc && studentsarr[i].getReservationCategory().equals("BC")
                     && filled <= totV) {
-                seats[filled] = stus[i];
+                seats[filled] = studentsarr[i];
                 filled += 1;
             }
         }
 
         for (int i = filled; st > 0 && i < totSz; i++) {
-            if (filled < unres + bc + st && stus[i].getReservationCategory().equals("ST")
+            if (filled < unres + bc + st && studentsarr[i].getReservationCategory().equals("ST")
                     && filled <= totV) {
-                seats[filled] = stus[i];
+                seats[filled] = studentsarr[i];
                 filled += 1;
 
             }
@@ -42,9 +42,9 @@ public final class Solution {
 
         for (int i = filled; sc > 0 && i < totSz; i++) {
             if (filled < unres + bc + st + sc &&
-                stus[i].getReservationCategory().equals("SC")
+                studentsarr[i].getReservationCategory().equals("SC")
                     && filled <= totV) {
-                seats[filled] = stus[i];
+                seats[filled] = studentsarr[i];
                 filled += 1;
             }
         }
