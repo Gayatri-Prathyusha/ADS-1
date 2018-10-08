@@ -91,7 +91,7 @@ class Sorting {
     /**.
      * { function_description }
      *
-     * @param      arrayay   The arrayay
+     * @param      array1   The arrayay
      * @param      cutOff  The cut off
      */
     public void sort(final Comparable[] array1, final int cutOff) {
@@ -146,6 +146,9 @@ class Sorting {
     }
 }
 
+/**
+ * Class for Solution.
+ */
 public final class Solution {
     /**.
      * Constructs the object.
