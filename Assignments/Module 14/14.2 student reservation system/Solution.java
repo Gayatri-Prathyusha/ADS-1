@@ -90,8 +90,8 @@ public final class Solution {
             }
 
             if (noBC > 0) {
-                if (students[i].getRc().equals("BC") &&
-                        students[i].getAlloted() != true) {
+                if (students[i].getRc().equals("BC")
+                    && students[i].getAlloted() != true) {
                     noBC--;
                     students[i].setAlloted(true);
                     alloted[k++] = students[i];
@@ -100,8 +100,8 @@ public final class Solution {
             }
 
             if (noSC > 0) {
-                if (students[i].getRc().equals("SC") &&
-                        students[i].getAlloted() != true) {
+                if (students[i].getRc().equals("SC")
+                    && students[i].getAlloted() != true) {
                     noSC--;
                     students[i].setAlloted(true);
                     alloted[k++] = students[i];
@@ -110,8 +110,8 @@ public final class Solution {
             }
 
             if (noSC > 0) {
-                if (students[i].getRc().equals("ST") &&
-                        students[i].getAlloted() != true) {
+                if (students[i].getRc().equals("ST")
+                    && students[i].getAlloted() != true) {
                     noST--;
                     students[i].setAlloted(true);
                     alloted[k++] = students[i];
@@ -121,8 +121,9 @@ public final class Solution {
         }
 
         for (i = 0; i < n; i++) {
-            if (vacancies > 0 && students[i].getRc().equals("Open") &&
-                    students[i].getAlloted() == false) {
+            if (vacancies > 0
+                && students[i].getRc().equals("Open")
+                && students[i].getAlloted() == false) {
                 students[i].setAlloted(true);
                 alloted[k++] = students[i];
                 vacancies--;
@@ -138,27 +139,50 @@ public final class Solution {
 /**
  * Students class that uses Comaprable to sort the student objects.
  * student who got more total marks will be given the priority
- * if total marks are equal then student who got more marks 
+ * if total marks are equal then student who got more marks
  * in subject 3 will be given the priority. 
  * if subject 3 marks are equal then student who got more marks
- * in subject 2 will be given the priority. 
+ * in subject 2 will be given the priority.
  * if subject 2 marks are equal then younger student
  * will be given priority.
  */
 class Student implements Comparable<Student> {
+    /**
+     * student name.
+     */
     private String studentName;
+    /**
+     * Date db.
+     */
     private Date db;
+    /**
+     * marks for subject 1.
+     */
     private int m1;
+    /**
+     * marks for subject 2.
+     */
     private int m2;
+    /**
+     * marks for subject 3.
+     */
     private int m3;
+    /**
+     * total marks.
+     */
     private int tm;
+    /**
+     * reseration category.
+     */
     private String rc;
+    /**
+     * allotted seats.
+     */
     private boolean alloted;
-    
     /**
      * returns true, if the student is already alloted,
      * otherwise false.
-     * 
+     *
      * @return true if alloted, otherwise false.
      */
     public boolean getAlloted() {
@@ -237,9 +261,9 @@ class Student implements Comparable<Student> {
      * @param      tm           Total Marks.
      * @param      rc           Reservation Category.
      */
-    Student(String studentName, String dateOfBirth,
-                   int m1, int m2, int m3, int tm,
-                   String rc) {
+    Student(final String studentName, final String dateOfBirth,
+                   final int m1, final int m2, final int m3, final int tm,
+                   final String rc) {
         this.studentName = studentName;
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
@@ -319,7 +343,7 @@ class Student implements Comparable<Student> {
 
     /**
      * When required the student's name can be updated.
-     * @param student.
+     * @param  student
      */
     public void setStudentName(final String student) {
         this.studentName = student;
