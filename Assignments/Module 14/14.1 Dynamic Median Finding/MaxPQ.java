@@ -2,7 +2,10 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 public class MaxPQ<Key> implements Iterable<Key> {
-    private Key[] pq;                    // store items at indices 1 to n
+    /**
+     *store items at indices 1 to n.
+     */
+    private Key[] pq;                    // 
     private int n;                       // number of items on priority queue
     private Comparator<Key> comparator;  // optional comparator
 
@@ -216,10 +219,15 @@ public class MaxPQ<Key> implements Iterable<Key> {
         // add all items to copy of heap
         // takes linear time since already in heap order so no keys move
         public HeapIterator() {
-            if (comparator == null) copy = new MaxPQ<Key>(size());
-            else                    copy = new MaxPQ<Key>(size(), comparator);
-            for (int i = 1; i <= n; i++)
+            if (comparator == null) {
+             copy = new MaxPQ<Key>(size());
+        } else {
+            	copy = new MaxPQ<Key>(size(), comparator);
+        }
+
+            for (int i = 1; i <= n; i++) {
                 copy.insert(pq[i]);
+            }
         }
 
         public boolean hasNext()  { return !copy.isEmpty();                     }
@@ -230,20 +238,5 @@ public class MaxPQ<Key> implements Iterable<Key> {
             return copy.delMax();
         }
     }
-
-    /**
-     * Unit tests the {@code MaxPQ} data type.
-     *
-     * @param args the command-line arguments
-     */
-    // public static void main(String[] args) {
-    //     MaxPQ<String> pq = new MaxPQ<String>();
-    //     while (!StdIn.isEmpty()) {
-    //         String item = StdIn.readString();
-    //         if (!item.equals("-")) pq.insert(item);
-    //         else if (!pq.isEmpty()) StdOut.print(pq.delMax() + " ");
-    //     }
-    //     StdOut.println("(" + pq.size() + " left on pq)");
-    // }
 
 }
