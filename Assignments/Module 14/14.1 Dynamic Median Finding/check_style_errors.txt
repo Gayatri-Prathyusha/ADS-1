@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 14/14.1 Dynamic Median Finding/MaxPQ.java:174:23: Parameter k should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 14/14.1 Dynamic Median Finding/MaxPQ.java:186:23: Parameter k should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 2 errors.
