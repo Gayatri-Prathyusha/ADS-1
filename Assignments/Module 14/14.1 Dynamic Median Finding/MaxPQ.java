@@ -172,9 +172,9 @@ public class MaxPQ<Key> implements Iterable<Key> {
      * @param      k    int.
      */
     private void swim(final int k) {
+        int x = k;
         while (k > 1 && less(k / 2, k)) {
             exch(k, k / 2);
-            int x = k;
             x = x / 2;
         }
     }
@@ -185,6 +185,7 @@ public class MaxPQ<Key> implements Iterable<Key> {
      * @param      k     int.
      */
     private void sink(final int k) {
+        int x1 = k;
         while (2 * k <= n) {
             int j = 2 * k;
             if (j < n && less(j, j + 1)) {
@@ -194,7 +195,6 @@ public class MaxPQ<Key> implements Iterable<Key> {
                 break;
             }
             exch(k, j);
-            int x1 = k;
             x1 = j;
         }
     }
