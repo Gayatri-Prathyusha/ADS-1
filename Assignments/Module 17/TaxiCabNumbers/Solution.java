@@ -36,8 +36,12 @@ class CubeSum implements Comparable<CubeSum> {
      */
 
     public int compareTo(final CubeSum other) {
-        if (this.sum < other.sum) return -1;
-        if (this.sum > other.sum) return +1;
+        if (this.sum < other.sum) {
+            return -1;
+        }
+        if (this.sum > other.sum) {
+            return +1;
+        }
         return 0;
     }
     /**
@@ -67,7 +71,7 @@ public final class Solution {
      * @param      args  The arguments.
      */
     public static void main(String[] args) {
-        int n = 600;
+        int n = 800;
         Scanner scan = new Scanner(System.in);
         int N = scan.nextInt();
         int M = scan.nextInt();
