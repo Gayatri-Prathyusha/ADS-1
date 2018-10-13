@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 /**
  * Class for stock.
  */
@@ -95,6 +96,8 @@ public final class Solution {
 		Scanner scan = new Scanner(System.in);
 
 		int n = Integer.parseInt(scan.nextLine());
+		ArrayList<Stock> top5 = new ArrayList<Stock>();
+		ArrayList<Stock> least5 = new ArrayList<Stock>();
 
 		// hour 1
 		MinPQ<Stock> onehourmin = new MinPQ<Stock>();
@@ -108,8 +111,8 @@ public final class Solution {
 			onehourmin.insert(temp);
 		}
 
-		onehourmax.toString();
-		onehourmin.toString();
+		onehourmax.printval(top5);
+		onehourmin.printval(least5);
 		
 
 		// hour 2
@@ -124,8 +127,8 @@ public final class Solution {
 			secondhourmin.insert(temp);
 		}
 
-		secondhourmax.toString();
-		secondhourmin.toString();
+		secondhourmax.printval(top5);
+		secondhourmin.printval(least5);
 
 		// hour 3
 		MinPQ<Stock> thirdhourmin = new MinPQ<Stock>();
@@ -139,8 +142,8 @@ public final class Solution {
 			thirdhourmin.insert(temp);
 		}
 
-		thirdhourmax.toString();
-		thirdhourmin.toString();
+		thirdhourmax.printval(top5);
+		thirdhourmin.printval(least5);
 
 		// hour 4
 		MinPQ<Stock> forthhourmin = new MinPQ<Stock>();
@@ -154,8 +157,8 @@ public final class Solution {
 			forthhourmin.insert(temp);
 		}
 
-		fourthhourmax.toString();
-		forthhourmin.toString();
+		fourthhourmax.printval(top5);
+		forthhourmin.printval(least5);
 
 		// hour 5
 		MinPQ<Stock> fifthhourmin = new MinPQ<Stock>();
@@ -169,8 +172,8 @@ public final class Solution {
 			fifthhourmin.insert(temp);
 		}
 
-		fifthhourmax.toString();
-		fifthhourmin.toString();		
+		fifthhourmax.printval(top5);
+		fifthhourmin.printval(least5);		
 
 		// hour 6
 		MinPQ<Stock> sixthhourmin = new MinPQ<Stock>();
@@ -184,8 +187,8 @@ public final class Solution {
 			sixthhourmin.insert(temp);
 		}
 
-		sixthhourmax.toString();
-		sixthhourmin.toString();		
+		sixthhourmax.printval(top5);
+		sixthhourmin.printval(least5);		
 
 	}
 }
