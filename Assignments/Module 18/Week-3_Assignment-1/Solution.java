@@ -71,9 +71,6 @@ public final class Solution {
 	        maxST.put(temp, 0);
 	      }
 	    }
-
-	    // System.out.println(maxST);
-
 	    for (int i = 0; i < topperformers.size(); i++) {
 	      String temp = topperformers.get(i);
 	      if (!maxST.contains(temp)) {
