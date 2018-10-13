@@ -1,4 +1,5 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 18/Week-3_Assignment-1/MaxPQ.java:178:30: '5' is a magic number. [MagicNumber]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 18/Week-3_Assignment-1/Stock.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 18/Week-3_Assignment-1/Stock.java:59:30: Parameter other should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 2 errors.
