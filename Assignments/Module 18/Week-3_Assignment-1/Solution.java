@@ -51,7 +51,7 @@ public final class Solution {
 	    int m = Integer.parseInt(scan.nextLine());
 	    String[] arr1 = scan.nextLine().split(",");
 	    BinarySearchST<String, Integer> bst = new BinarySearchST<String, Integer>();
-	    for(int i = 0; i < m; i++) {
+	    for(int i = 0; i < m - 1; i++) {
 	    	bst.put(arr1[i], i);
 	    }
 	    while (scan.hasNext()) {
