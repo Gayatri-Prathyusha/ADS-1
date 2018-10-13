@@ -48,6 +48,9 @@ public final class Solution {
 		for(int i = 0; i < 6 ; i++) {
 		EveryHour(top5, least5, n, scan);
 	    }
+	    if (scan.hasNext()) {
+
+
 	    int m = Integer.parseInt(scan.nextLine());
 	    String[] arr1 = scan.nextLine().split(",");
 	    BinarySearchST<String, Integer> bst = new BinarySearchST<String, Integer>();
@@ -68,6 +71,7 @@ public final class Solution {
                 default:
                 break;
             }
+        }
 
 	}
 
