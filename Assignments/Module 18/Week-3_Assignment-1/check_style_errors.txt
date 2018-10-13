@@ -1,6 +1,4 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 18/Week-3_Assignment-1/MaxPQ.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 18/Week-3_Assignment-1/MaxPQ.java:174:47: Expected @param tag for 'best'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 18/Week-3_Assignment-1/MaxPQ.java:175:30: '5' is a magic number. [MagicNumber]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 18/Week-3_Assignment-1/MaxPQ.java:178:30: '5' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.

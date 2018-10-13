@@ -169,8 +169,11 @@ public class MaxPQ<Key> {
         pq[j] = swap;
     }
     /**
-    * Prints the maximum 5 of the PQ.
-    */
+     * Prints the maximum 5 of the PQ.
+
+     *
+     * @param      best  The best
+     */
     public void printval(final ArrayList<Key> best) {
         for (int i = 1; i <= 5; i++) {
             Key temp = delMax();

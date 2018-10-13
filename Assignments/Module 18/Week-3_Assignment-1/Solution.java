@@ -11,7 +11,7 @@ class Stock implements Comparable<Stock> {
 	/**
 	 * Class variable for change in stock by hour.
 	 */
-	private double change;
+	private float change;
 
 	/**
 	 * Constructs the object.
@@ -19,7 +19,7 @@ class Stock implements Comparable<Stock> {
 	 * @param      companyname1   The company Name.
 	 * @param      change1   The change
 	 */
-	Stock(final String companyname1, final double change1) {
+	Stock(final String companyname1, final float change1) {
 		this.companyname = companyname1;
 		this.change = change1;
 	}
@@ -38,7 +38,7 @@ class Stock implements Comparable<Stock> {
 	 *
 	 * @return     The change.
 	 */
-	public double getChange() {
+	public float getChange() {
 		return change;
 	}
 
@@ -98,97 +98,100 @@ public final class Solution {
 		int n = Integer.parseInt(scan.nextLine());
 		ArrayList<Stock> top5 = new ArrayList<Stock>();
 		ArrayList<Stock> least5 = new ArrayList<Stock>();
-
-		// hour 1
+		EveryHour(top5, least5, n, scan);
+	}
+		// First hour
+		
+	public static void EveryHour(ArrayList<Stock> top5, ArrayList<Stock> least5, int size, Scanner sc) {
 		MinPQ<Stock> onehourmin = new MinPQ<Stock>();
 		MaxPQ<Stock> onehourmax = new MaxPQ<Stock>();
-
-		for (int i = 0; i < n; i++) {
-			String[] inputs = scan.nextLine().split(",");
-			Stock temp = new Stock(inputs[0],
-			                       Double.parseDouble(inputs[1]));
+		for (int i = 0; i < size; i++) {
+			String[] arrayinput = sc.nextLine().split(",");
+			Stock temp = new Stock(arrayinput[0],
+			                       Float.parseFloat(arrayinput[1]));
 			onehourmax.insert(temp);
 			onehourmin.insert(temp);
 		}
-
 		onehourmax.printval(top5);
 		onehourmin.printval(least5);
+
+		}
 		
 
-		// hour 2
-		MinPQ<Stock> secondhourmin = new MinPQ<Stock>();
-		MaxPQ<Stock> secondhourmax = new MaxPQ<Stock>();
+		// // Second hour
+		// MinPQ<Stock> secondhourmin = new MinPQ<Stock>();
+		// MaxPQ<Stock> secondhourmax = new MaxPQ<Stock>();
 
-		for (int i = 0; i < n; i++) {
-			String[] inputs = scan.nextLine().split(",");
-			Stock temp = new Stock(inputs[0],
-			                       Double.parseDouble(inputs[1]));
-			secondhourmax.insert(temp);
-			secondhourmin.insert(temp);
-		}
+		// for (int i = 0; i < n; i++) {
+		// 	String[] inputs = scan.nextLine().split(",");
+		// 	Stock temp = new Stock(inputs[0],
+		// 	                       Float.parseFloat(inputs[1]));
+		// 	secondhourmax.insert(temp);
+		// 	secondhourmin.insert(temp);
+		// }
 
-		secondhourmax.printval(top5);
-		secondhourmin.printval(least5);
+		// secondhourmax.printval(top5);
+		// secondhourmin.printval(least5);
 
-		// hour 3
-		MinPQ<Stock> thirdhourmin = new MinPQ<Stock>();
-		MaxPQ<Stock> thirdhourmax = new MaxPQ<Stock>();
+		// Third Hour
+		// MinPQ<Stock> thirdhourmin = new MinPQ<Stock>();
+		// MaxPQ<Stock> thirdhourmax = new MaxPQ<Stock>();
 
-		for (int i = 0; i < n; i++) {
-			String[] inputs = scan.nextLine().split(",");
-			Stock temp = new Stock(inputs[0],
-			                       Double.parseDouble(inputs[1]));
-			thirdhourmax.insert(temp);
-			thirdhourmin.insert(temp);
-		}
+		// for (int i = 0; i < n; i++) {
+		// 	String[] inputs = scan.nextLine().split(",");
+		// 	Stock temp = new Stock(inputs[0],
+		// 	                       Float.parseFloat(inputs[1]));
+		// 	thirdhourmax.insert(temp);
+		// 	thirdhourmin.insert(temp);
+		// }
 
-		thirdhourmax.printval(top5);
-		thirdhourmin.printval(least5);
+		// thirdhourmax.printval(top5);
+		// thirdhourmin.printval(least5);
 
-		// hour 4
-		MinPQ<Stock> forthhourmin = new MinPQ<Stock>();
-		MaxPQ<Stock> fourthhourmax = new MaxPQ<Stock>();
+		// // Fourth Hour
+		// MinPQ<Stock> forthhourmin = new MinPQ<Stock>();
+		// MaxPQ<Stock> fourthhourmax = new MaxPQ<Stock>();
 
-		for (int i = 0; i < n; i++) {
-			String[] inputs = scan.nextLine().split(",");
-			Stock temp = new Stock(inputs[0],
-			                       Double.parseDouble(inputs[1]));
-			fourthhourmax.insert(temp);
-			forthhourmin.insert(temp);
-		}
+		// for (int i = 0; i < n; i++) {
+		// 	String[] inputs = scan.nextLine().split(",");
+		// 	Stock temp = new Stock(inputs[0],
+		// 	                       Float.parseFloat(inputs[1]));
+		// 	fourthhourmax.insert(temp);
+		// 	forthhourmin.insert(temp);
+		// }
 
-		fourthhourmax.printval(top5);
-		forthhourmin.printval(least5);
+		// fourthhourmax.printval(top5);
+		// forthhourmin.printval(least5);
 
-		// hour 5
-		MinPQ<Stock> fifthhourmin = new MinPQ<Stock>();
-		MaxPQ<Stock> fifthhourmax = new MaxPQ<Stock>();
+		// Fifth Hour
+		// MinPQ<Stock> fifthhourmin = new MinPQ<Stock>();
+		// MaxPQ<Stock> fifthhourmax = new MaxPQ<Stock>();
 
-		for (int i = 0; i < n; i++) {
-			String[] inputs = scan.nextLine().split(",");
-			Stock temp = new Stock(inputs[0],
-			                       Double.parseDouble(inputs[1]));
-			fifthhourmax.insert(temp);
-			fifthhourmin.insert(temp);
-		}
+		// for (int i = 0; i < n; i++) {
+		// 	String[] inputs = scan.nextLine().split(",");
+		// 	Stock temp = new Stock(inputs[0],
+		// 	                       Float.parseFloat(inputs[1]));
+		// 	fifthhourmax.insert(temp);
+		// 	fifthhourmin.insert(temp);
+		// }
 
-		fifthhourmax.printval(top5);
-		fifthhourmin.printval(least5);		
+		// fifthhourmax.printval(top5);
+		// fifthhourmin.printval(least5);		
 
-		// hour 6
-		MinPQ<Stock> sixthhourmin = new MinPQ<Stock>();
-		MaxPQ<Stock> sixthhourmax = new MaxPQ<Stock>();
+		// // Sixth Hour
+		// MinPQ<Stock> sixthhourmin = new MinPQ<Stock>();
+		// MaxPQ<Stock> sixthhourmax = new MaxPQ<Stock>();
 
-		for (int i = 0; i < n; i++) {
-			String[] inputs = scan.nextLine().split(",");
-			Stock temp = new Stock(inputs[0],
-			                       Double.parseDouble(inputs[1]));
-			sixthhourmax.insert(temp);
-			sixthhourmin.insert(temp);
-		}
+		// for (int i = 0; i < n; i++) {
+		// 	String[] inputs = scan.nextLine().split(",");
+		// 	Stock temp = new Stock(inputs[0],
+		// 	                       Float.parseFloat(inputs[1]));
+		// 	sixthhourmax.insert(temp);
+		// 	sixthhourmin.insert(temp);
+		// }
 
-		sixthhourmax.printval(top5);
-		sixthhourmin.printval(least5);		
+		// sixthhourmax.printval(top5);
+		// sixthhourmin.printval(least5);		
 
-	}
+    
 }

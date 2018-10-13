@@ -163,6 +163,8 @@ public class MinPQ<Key> {
     }
     /**
      * Prints the minimum 5 of the PQ.
+     *
+     * @param      worst  The worst
      */
     public void printval(final ArrayList<Key> worst) {
         for (int i = 1; i <= 5; i++) {
