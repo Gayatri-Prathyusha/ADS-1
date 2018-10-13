@@ -48,32 +48,32 @@ public final class Solution {
 		for(int i = 0; i < 6 ; i++) {
 		EveryHour(top5, least5, n, scan);
 	    }
-	    if (scan.hasNext()) {
+
+	    // if (scan.hasNext()) {
 
 
-	    int m = Integer.parseInt(scan.nextLine());
-	    String[] arr1 = scan.nextLine().split(",");
-	    BinarySearchST<String, Integer> bst = new BinarySearchST<String, Integer>();
-	    for(int i = 0; i < m - 1; i++) {
-	    	bst.put(arr1[i], i);
-	    }
-	    while (scan.hasNext()) {
+	    // int m = Integer.parseInt(scan.nextLine());
+	    // String[] arr1 = scan.nextLine().split(",");
+	    // BinarySearchST<String, Integer> bst = new BinarySearchST<String, Integer>();
+	    // for(int i = 0; i < m - 1; i++) {
+	    // 	bst.put(arr1[i], i);
+	    // }
+	    // while (scan.hasNext()) {
             
-            switch (arr1[0]) {
-                case "get":
-                System.out.println(arr1[2]);
-                break;
-                case "intersection":
+     //        switch (arr1[0]) {
+     //            case "get":
+     //            System.out.println(arr1[2]);
+     //            break;
+     //            case "intersection":
 
 
                 
-                break;
-                default:
-                break;
-            }
-        }
+     //            break;
+     //            default:
+     //            break;
+     //        }
+     //    }
 
 	}
 
-}
 }
