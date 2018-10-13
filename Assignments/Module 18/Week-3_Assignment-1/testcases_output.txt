@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 Merck Ltd 4.83
 ICRA 2.84
@@ -143,12 +143,8 @@ Honeywell Auto -1.08
 Sanofi India 0.21
 Tasty Bite Eat 0.23
 WABCO India 0.33
-
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.EveryHour(Solution.java:112)
-	at Solution.main(Solution.java:102)
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 Larsen & Toubro 4.11
 Vinati Organics 4.03
@@ -293,10 +289,6 @@ NIIT Tech 0.21
 Fine Organic Industries Ltd. 0.29
 Vinati Organics 1.03
 Chola Inv Fin 1.47
-
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.EveryHour(Solution.java:112)
-	at Solution.main(Solution.java:102)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -448,10 +440,6 @@ Honeywell Auto -1.08
 Sanofi India 0.21
 Tasty Bite Eat 0.23
 WABCO India 0.33
-
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.EveryHour(Solution.java:112)
-	at Solution.main(Solution.java:102)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -603,10 +591,6 @@ NIIT Tech 0.21
 Fine Organic Industries Ltd. 0.29
 Vinati Organics 1.03
 Chola Inv Fin 1.47
-
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.EveryHour(Solution.java:112)
-	at Solution.main(Solution.java:102)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -773,8 +757,4 @@ Honeywell Auto -1.08
 Sanofi India 0.21
 Tasty Bite Eat 0.23
 WABCO India 0.33
-
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.EveryHour(Solution.java:112)
-	at Solution.main(Solution.java:102)
 ----------------------------------------

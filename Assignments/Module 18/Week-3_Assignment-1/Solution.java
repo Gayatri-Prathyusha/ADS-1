@@ -98,7 +98,7 @@ public final class Solution {
 		int n = Integer.parseInt(scan.nextLine());
 		ArrayList<Stock> top5 = new ArrayList<Stock>();
 		ArrayList<Stock> least5 = new ArrayList<Stock>();
-		for(int i = 0; i <=6 ; i++) {
+		for(int i = 0; i < 6 ; i++) {
 		EveryHour(top5, least5, n, scan);
 	    }
 	}
