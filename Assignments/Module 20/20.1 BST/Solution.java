@@ -19,16 +19,16 @@ public final class Solution {
         Scanner scan = new Scanner(System.in);
         BinarySearchTree binaryobject = new BinarySearchTree();
         while (scan.hasNext()) {
-            String[] check = scan.nextLine().split(",");
-            switch (check[0]) {
+            String[] str = scan.nextLine().split(",");
+            switch (str[0]) {
             case "put":
-                BookDetails bookdetailsobject = new BookDetails(check[1], check[2],
-                    Float.parseFloat(check[2 + 1]));
-                binaryobject.put(bookdetailsobject, Integer.parseInt(check[2 + 2]));
+                BookDetails bookdetailsobject = new BookDetails(str[1], str[2],
+                    Float.parseFloat(str[2 + 1]));
+                binaryobject.put(bookdetailsobject, Integer.parseInt(str[2 + 2]));
                 break;
             case "get":
-                bookdetailsobject = new BookDetails(check[1], check[2],
-                                        Float.parseFloat(check[2 + 1]));
+                bookdetailsobject = new BookDetails(str[1], str[2],
+                                        Float.parseFloat(str[2 + 1]));
                 if (binaryobject.get(bookdetailsobject) == -1) {
                     System.out.println("null");
                 } else {
@@ -42,16 +42,16 @@ public final class Solution {
                 System.out.println(binaryobject.min());
                 break;
             case "select":
-                System.out.println(binaryobject.select(Integer.parseInt(check[1])));
+                System.out.println(binaryobject.select(Integer.parseInt(str[1])));
                 break;
             case "floor":
-                bookdetailsobject = new BookDetails(check[1],
-                    check[2], Float.parseFloat(check[2 + 1]));
+                bookdetailsobject = new BookDetails(str[1],
+                    str[2], Float.parseFloat(str[2 + 1]));
                 System.out.println(binaryobject.floor(bookdetailsobject));
                 break;
             case "ceiling":
-                bookdetailsobject = new BookDetails(check[1],
-                    check[2], Float.parseFloat(check[2 + 1]));
+                bookdetailsobject = new BookDetails(str[1],
+                    str[2], Float.parseFloat(str[2 + 1]));
                 System.out.println(binaryobject.ceiling(bookdetailsobject));
                 break;
             case "deleteMax":
@@ -61,8 +61,8 @@ public final class Solution {
                 binaryobject.deleteMin();
                 break;
             case "delete":
-                bookdetailsobject = new BookDetails(check[1], check[2],
-                    Float.parseFloat(check[2 + 1]));
+                bookdetailsobject = new BookDetails(str[1], str[2],
+                    Float.parseFloat(str[2 + 1]));
                 binaryobject.delete(bookdetailsobject);
                 break;
             default:
