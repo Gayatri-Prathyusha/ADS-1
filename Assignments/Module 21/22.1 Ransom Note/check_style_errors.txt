@@ -1,12 +1,2 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:16:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:124:20: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:124:21: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:124:22: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:124:23: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:124:24: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:124:25: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:124:26: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:124:27: '+' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 9 errors.

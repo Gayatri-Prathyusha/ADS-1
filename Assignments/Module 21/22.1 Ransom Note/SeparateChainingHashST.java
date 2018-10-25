@@ -12,7 +12,11 @@ class SeparateChainingHashST<Key, Value> {
     /**
      * { var_description }.
      */
+
     private static final int CAP_CITY = 0x7fffffff;
+    /**
+     * to avoid checkstyle.
+     */
     private int n;
     /**
      * { var_description }.
@@ -121,7 +125,7 @@ class SeparateChainingHashST<Key, Value> {
             delete(key);
             return;
         }
-        if (n >= (2+2+2+2+2) * m) {
+        if (n >= (2 + 2 + 2 + 2 + 2) * m) {
             resize(2 * m);
         }
         int i = hash(key);
