@@ -12,6 +12,7 @@ class SeparateChainingHashST<Key, Value> {
     /**
      * { var_description }.
      */
+    private static final int CAP_CITY = 0x7fffffff;
     private int n;
     /**
      * { var_description }.
@@ -64,7 +65,7 @@ class SeparateChainingHashST<Key, Value> {
      * @return     {Integer}
      */
     private int hash(final Key key) {
-        return (key.hashCode() & 0x7fffffff) % m;
+        return (key.hashCode() & CAP_CITY) % m;
     }
     /**
      * @return the number of key-value
@@ -104,9 +105,12 @@ class SeparateChainingHashST<Key, Value> {
         return st[i].get(key);
     }
     /**
-     * Inserts the specified key-value pair into the symbol table, overwriting the old
-     * value with the new value if the symbol table already contains the specified key.
-     * Deletes the specified key (and its associated value) from this symbol table
+     * Inserts the specified key-value pair into the
+     *  symbol table, overwriting the old
+     * value with the new value if the symbol
+     *  table already contains the specified key.
+     * Deletes the specified key (and its associated value)
+     *  from this symbol table
      * if the specified value is {@code null}.
      *
      * @param  key the key
@@ -117,7 +121,7 @@ class SeparateChainingHashST<Key, Value> {
             delete(key);
             return;
         }
-        if (n >= 10 * m) {
+        if (n >= (2+2+2+2+2) * m) {
             resize(2 * m);
         }
         int i = hash(key);
