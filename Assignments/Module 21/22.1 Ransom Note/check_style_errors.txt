@@ -1,0 +1,9 @@
+Starting audit...
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:67:34: '0x7fffffff' is a magic number. [MagicNumber]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:107: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:108: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:109: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 21/22.1 Ransom Note/SeparateChainingHashST.java:120:18: '10' is a magic number. [MagicNumber]
+Audit done.
+Checkstyle ends with 6 errors.
