@@ -63,10 +63,10 @@ class Student implements Comparable<Student>{
         if (this.marks < other.marks) {
             return -1;
         }
-        if (this.name.compareTo(other.name) > 0) {
+        if (this.rollNumber > other.rollNumber){
             return 1;
         }
-        if (this.name.compareTo(other.name) < 0) {
+        if (this.rollNumber < other.rollNumber) {
             return -1;
         } else {
             return 0;

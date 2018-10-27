@@ -8,7 +8,8 @@ public final class Solution {
    * Constructs the object.
    */
   private Solution() {
-    // unused
+    // unused.
+    //to remove the checkstyle.
   }
 
   /**
@@ -30,11 +31,11 @@ public final class Solution {
     BST<Student, Integer> section = new BST<>();
 
     for (int i = 0; i < n; i++) {
-      String[] inp = scan.nextLine().split(",");
-      Student temp = new Student(Integer.parseInt(inp[0]),
-                                 inp[1],
-                                 Double.parseDouble(inp[2]));
-      section.put(temp, Integer.parseInt(inp[0]));
+      String[] inputstring = scan.nextLine().split(",");
+      Student studentobject = new Student(Integer.parseInt(inputstring[0]),
+                                 inputstring[1],
+                                 Double.parseDouble(inputstring[2]));
+      section.put(studentobject, Integer.parseInt(inputstring[0]));
     }
 
     int m = Integer.parseInt(scan.nextLine());
@@ -53,17 +54,17 @@ public final class Solution {
         }
         break;
       case "LE":
-        double bound = Double.parseDouble(tokens[1]);
+        double endlimit = Double.parseDouble(tokens[1]);
         for (Student each : section.keys()) {
-          if (each.getMarks() <= bound) {
+          if (each.getMarks() <= endlimit) {
             System.out.println(each);
           }
         }
         break;
       case "GE":
-        double bound1 = Double.parseDouble(tokens[1]);
+        double startlimit = Double.parseDouble(tokens[1]);
         for (Student each : section.keys()) {
-          if (each.getMarks() >= bound1) {
+          if (each.getMarks() >= startlimit) {
             System.out.println(each);
           }
         }
