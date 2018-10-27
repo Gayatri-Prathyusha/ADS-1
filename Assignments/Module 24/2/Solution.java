@@ -8,8 +8,7 @@ public final class Solution {
    * Constructs the object.
    */
   private Solution() {
-    // unused.
-    //for checkstyle to remove.
+    // unused
   }
 
   /**
@@ -28,14 +27,14 @@ public final class Solution {
 
     int n = Integer.parseInt(scan.nextLine());
 
-    BinarySearchTree binarysection = new BinarySearchTree();
+    BST<Student, Integer> section = new BST<>();
 
     for (int i = 0; i < n; i++) {
       String[] inp = scan.nextLine().split(",");
       Student temp = new Student(Integer.parseInt(inp[0]),
                                  inp[1],
                                  Double.parseDouble(inp[2]));
-      binarysection.put(Integer.parseInt(inp[0]), temp);
+      section.put(temp, Integer.parseInt(inp[0]));
     }
 
     int m = Integer.parseInt(scan.nextLine());
@@ -44,29 +43,31 @@ public final class Solution {
       String[] tokens = scan.nextLine().split(" ");
       switch (tokens[0]) {
       case "BE":
-        try {
-          System.out.println(binarysection.get(
-                               Integer.parseInt(tokens[1])).getMarks());
-        } catch (Exception e) {
-          System.out.println("Student doesn't exists...");
+        double min = Double.parseDouble(tokens[1]);
+        double max = Double.parseDouble(tokens[2]);
+        for (Student each : section.keys()) {
+          if (each.getMarks() >= min
+              && each.getMarks() <= max) {
+            System.out.println(each);
+          }
         }
         break;
       case "LE":
-        try {
-          System.out.println(binarysection.get(
-                               Integer.parseInt(tokens[1])).getMarks());
-        } catch (Exception e) {
-          System.out.println("Student doesn't exists...");
+        double bound = Double.parseDouble(tokens[1]);
+        for (Student each : section.keys()) {
+          if (each.getMarks() <= bound) {
+            System.out.println(each);
+          }
         }
         break;
-        case "GE":
-        try {
-          System.out.println(binarysection.get(
-                               Integer.parseInt(tokens[1])).getMarks());
-        } catch (Exception e) {
-          System.out.println("Student doesn't exists...");
+      case "GE":
+        double bound1 = Double.parseDouble(tokens[1]);
+        for (Student each : section.keys()) {
+          if (each.getMarks() >= bound1) {
+            System.out.println(each);
+          }
         }
-        break;        
+        break;
       default:
         break;
       }

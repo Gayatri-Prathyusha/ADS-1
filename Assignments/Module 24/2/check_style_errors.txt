@@ -1,2 +1,7 @@
 Starting audit...
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 24/2/Student.java:4:45: '>' is followed by an illegal character. [GenericWhitespace]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 24/2/Student.java:4:45: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 24/2/Student.java:59:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/ADS-1/Assignments/Module 24/2/Student.java:59:26: Parameter other should be final. [FinalParameters]
 Audit done.
+Checkstyle ends with 4 errors.
