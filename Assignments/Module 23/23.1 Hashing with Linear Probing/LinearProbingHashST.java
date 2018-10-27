@@ -193,26 +193,38 @@ class LinearProbingHashST<Key, Value> {
      */
     public Iterable<Key> keys() {
         Queue<Key> queue = new Queue<Key>();
-        for (int i = 0; i < m; i++)
-            if (keys[i] != null) queue.enqueue(keys[i]);
+        for (int i = 0; i < m; i++) {
+            if (keys[i] != null) {
+                queue.enqueue(keys[i]);
+            }
+        }
         return queue;
     }
 
-    // integrity check - don't check after each put() because
-    // integrity not maintained during a delete()
+
+    /**
+     * check method.
+     * integrity check - don't check after each put() because.
+     * integrity not maintained during a delete().
+     * @return     { boolean value }
+     */
     private boolean check() {
 
         // check that hash table is at most 50% full
-        if (m < 2*n) {
-            System.err.println("Hash table size m = " + m + "; array size n = " + n);
+        if (m < 2 * n) {
+            System.err.println("Hash table size m = "
+                + m + "; array size n = " + n);
             return false;
         }
 
         // check that each key in table can be found by get()
         for (int i = 0; i < m; i++) {
-            if (keys[i] == null) continue;
+            if (keys[i] == null) {
+               continue;
+            }
             else if (get(keys[i]) != vals[i]) {
-                System.err.println("get[" + keys[i] + "] = " + get(keys[i]) + "; vals[i] = " + vals[i]);
+                System.err.println("get[" + keys[i] + "] = "
+                 + get(keys[i]) + "; vals[i] = " + vals[i]);
                 return false;
             }
         }
