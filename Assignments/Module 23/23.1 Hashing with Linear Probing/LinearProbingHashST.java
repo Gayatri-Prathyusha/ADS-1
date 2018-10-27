@@ -1,3 +1,9 @@
+/**
+ * Class for linear probing hash st.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
 class LinearProbingHashST<Key, Value> {
     /**
      * to remove magic number.
