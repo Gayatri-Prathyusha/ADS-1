@@ -1,22 +1,22 @@
 class LinearProbingHashST<Key, Value> {
     /**
-     * { var_description }
+     * to remove magic number.
      */
     private static final int INIT_CAPACITY = 4;
     /**
-     * number of key-value pairs in the symbol table
+     * number of key-value pairs in the symbol table.
      */
     private int n;
     /**
-     * size of linear probing table
+     * size of linear probing table.
      */
     private int m;
     /**
-     * the keys
+     * the keys.
      */
     private Key[] keys;
     /**
-     * the values
+     * the values.
      */
     private Value[] vals;
 
@@ -83,7 +83,7 @@ class LinearProbingHashST<Key, Value> {
      */
     private int hash(final Key key) {
         // return (key.hashCode() & 0x7fffffff) % m;
-        return ((2+2+2+2+2+1) * key.hashCode()) % m;
+        return ((2 + 2 + 2 + 2 + 2 + 1) * key.hashCode()) % m;
     }
     /**
      * resizes the hash table to the given
@@ -118,7 +118,8 @@ class LinearProbingHashST<Key, Value> {
      */
     public void put(final Key key, final Value val) {
         if (key == null) {
-            throw new IllegalArgumentException("first argument to put() is null");
+            throw new IllegalArgumentException(
+                "first argument to put() is null");
         }
 
         if (val == null) {
@@ -153,10 +154,13 @@ class LinearProbingHashST<Key, Value> {
         if (key == null) {
             throw new IllegalArgumentException("argument to get() is null");
         }
-        for (int i = hash(key) ;keys[i] != null; i = (i + 1) % m)
+        for (int i = hash(key); keys[i] != null; i = (i + 1) % m) {
+
+
             if (keys[i].equals(key)) {
                 return vals[i];
             }
+        }
         return null;
     }
 
@@ -203,7 +207,9 @@ class LinearProbingHashST<Key, Value> {
         n--;
 
         // halves size of array if it's 12.5% full or less
-        if (n > 0 && n <= m / (2+2+2+2)) resize(m / 2);
+        if (n > 0 && n <= m / (2 + 2 + 2 + 2)) {
+            resize(m / 2);
+        }
 
         assert check();
     }
@@ -266,8 +272,7 @@ class LinearProbingHashST<Key, Value> {
         for (int i = 0; i < m; i++) {
             if (keys[i] == null) {
                continue;
-            }
-            else if (get(keys[i]) != vals[i]) {
+            } else if (get(keys[i]) != vals[i]) {
                 System.err.println("get[" + keys[i] + "] = "
                  + get(keys[i]) + "; vals[i] = " + vals[i]);
                 return false;
