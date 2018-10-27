@@ -42,16 +42,8 @@ public final class Solution {
 
     for (int j = 0; j < m; j++) {
       String[] tokens = scan.nextLine().split(" ");
-      switch (tokens[2]) {
-      case "1":
-        try {
-          System.out.println(binarysection.get(
-                               Integer.parseInt(tokens[1])).getName());
-        } catch (Exception e) {
-          System.out.println("Student doesn't exists...");
-        }
-        break;
-      case "2":
+      switch (tokens[0]) {
+      case "BE":
         try {
           System.out.println(binarysection.get(
                                Integer.parseInt(tokens[1])).getMarks());
@@ -59,6 +51,22 @@ public final class Solution {
           System.out.println("Student doesn't exists...");
         }
         break;
+      case "LE":
+        try {
+          System.out.println(binarysection.get(
+                               Integer.parseInt(tokens[1])).getMarks());
+        } catch (Exception e) {
+          System.out.println("Student doesn't exists...");
+        }
+        break;
+        case "GE":
+        try {
+          System.out.println(binarysection.get(
+                               Integer.parseInt(tokens[1])).getMarks());
+        } catch (Exception e) {
+          System.out.println("Student doesn't exists...");
+        }
+        break;        
       default:
         break;
       }

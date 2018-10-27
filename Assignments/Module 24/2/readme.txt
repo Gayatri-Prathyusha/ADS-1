@@ -1,4 +1,6 @@
-Given the data in the form of comma separated values, you have to lookup (Search) for the data in the given range in average logarithmic time complexity.
+Given the data in the form of comma separated values, 
+you have to lookup (Search) for the data in the given range in average
+logarithmic time complexity.
 
 Following is the student data format:
 roll_number,student_name,total_marks
