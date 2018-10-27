@@ -64,19 +64,6 @@ public class LinearProbingHashST<Key, Value> {
         return k % m;
     }
 
-    // resizes the hash table to the given capacity by re-hashing all of the keys
-    // private void resize(int capacity) {
-    //     LinearProbingHashST<Key, Value> temp = new LinearProbingHashST<Key, Value>(capacity);
-    //     for (int i = 0; i < m; i++) {
-    //         if (keys[i] != null) {
-    //             temp.put(keys[i], vals[i]);
-    //         }
-    //     }
-    //     keys = temp.keys;
-    //     vals = temp.vals;
-    //     m    = temp.m;
-    // }
-
     /**
      * Inserts the specified key-value pair into the symbol table, overwriting the old
      * value with the new value if the symbol table already contains the specified key.

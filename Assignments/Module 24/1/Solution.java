@@ -8,7 +8,8 @@ public final class Solution {
    * Constructs the object.
    */
   private Solution() {
-    // unused
+    // unused .
+    //for checkstyle to remove.
   }
 
   /**
@@ -17,21 +18,18 @@ public final class Solution {
    * @param      args  The arguments
    */
   public static void main(final String[] args) {
-
     final int three = 3;
     Scanner scan = new Scanner(System.in);
 
     int n = Integer.parseInt(scan.nextLine());
-
-    LinearProbingHashST<Integer, Student> section =
+    LinearProbingHashST<Integer, Student> linearsection =
       new LinearProbingHashST<>(three * n);
-
     for (int i = 0; i < n; i++) {
-      String[] inp = scan.nextLine().split(",");
-      Student temp = new Student(Integer.parseInt(inp[0]),
-                                 inp[1],
-                                 Double.parseDouble(inp[2]));
-      section.put(Integer.parseInt(inp[0]), temp);
+      String[] input = scan.nextLine().split(",");
+      Student studentobject = new Student(Integer.parseInt(input[0]),
+                                 input[1],
+                                 Double.parseDouble(input[2]));
+      linearsection.put(Integer.parseInt(input[0]), studentobject);
     }
 
     int m = Integer.parseInt(scan.nextLine());
@@ -41,7 +39,7 @@ public final class Solution {
       switch (tokens[2]) {
       case "1":
         try {
-          System.out.println(section.get(
+          System.out.println(linearsection.get(
                                Integer.parseInt(tokens[1])).getName());
         } catch (Exception e) {
           System.out.println("Student doesn't exists...");
@@ -49,7 +47,7 @@ public final class Solution {
         break;
       case "2":
         try {
-          System.out.println(section.get(
+          System.out.println(linearsection.get(
                                Integer.parseInt(tokens[1])).getMarks());
         } catch (Exception e) {
           System.out.println("Student doesn't exists...");
