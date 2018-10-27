@@ -18,9 +18,9 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      num   The roll number
-     * @param      nm    Name
-     * @param      mrks  The marks
+     * @param      roll   The roll number
+     * @param      studentname    Name
+     * @param      marks1  The marks
      */
     Student(final int roll, final String studentname, final double marks1) {
         this.rollNumber = roll;
